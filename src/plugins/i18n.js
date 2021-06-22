@@ -9,6 +9,11 @@ const messages = {
         header: {
             lang: 'Jezik',
             search: 'Pretraži',
+            home: 'Početna',
+            recipes: 'Recepti',
+            addRecipe: 'Dodaj recept',
+            myAccount: 'Moj nalog',
+            aboutUs: 'O nama',
         },
         homepage: {
             welcomeMsg: 'Dobrodošli na cookbook!',
