@@ -2,6 +2,19 @@
     <div class="hello">
         <h1>{{ $t('homepage.welcomeMsg') }}</h1>
 
+        <b-container class="bv-example-row mb-3" style="width:50%;">
+            <b-row cols="2">
+                <b-col>
+                    <b-button variant="success" v-on:click="changeLocale('sr')">Srb</b-button>
+                </b-col>
+                <b-col>
+                    <b-button variant="success" v-on:click="changeLocale('en')">Eng</b-button>
+                </b-col>
+            </b-row>
+        </b-container>
+
+        <b-button variant="success" onclick="alert('I dindu nuffin');">A vue-bootstrap test button</b-button>
+
         <p>
             For a guide and recipes on how to configure / customize this project,<br>
             check out the
@@ -33,11 +46,17 @@
 </template>
 
 <script>
+    import i18n from '@/plugins/i18n';
 
     export default {
         name: 'HelloWorld',
         props: {
             msg: String
+        },
+        methods: {
+            changeLocale(locale) {
+                i18n.locale = locale;
+            }
         }
     }
 </script>
