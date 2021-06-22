@@ -1,5 +1,7 @@
 # wdcookbook
 
+Ja ovo nisam pisao, samo se tu našlo.
+
 ## Project setup
 ```
 npm install
