@@ -1,23 +1,25 @@
 ﻿<template>
     <div id="navdiv">
-        <b-navbar id="navbar" toggleable="lg" sticky=true variant="warning">
-            <b-navbar-brand> <b-icon-book-half /> CookBook</b-navbar-brand>
+        <b-navbar id="navbar" toggleable="lg" sticky variant="warning">
+            <b-navbar-brand to="/"> <b-icon-book-half /> CookBook</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav pills fill>
-                    <b-nav-item href="#" active>{{ $t('header.home') }}</b-nav-item>
-                    <b-nav-item href="#">{{ $t('header.recipes') }}</b-nav-item>
-                    <b-nav-item href="#">{{ $t('header.addRecipe') }}</b-nav-item>
-                    <b-nav-item href="#">{{ $t('header.myAccount') }}</b-nav-item>
-                    <b-nav-item href="#">{{ $t('header.aboutUs') }}</b-nav-item>
+                    <b-nav-item to="/" exact exact-active-class="active">{{ $t('header.home') }}</b-nav-item>
+                    <b-nav-item-dropdown to="recipe" exact exact-active-class="active" v-bind:text="$t('header.recipes')">
+                        <b-dropdown-item v-for="category in categories" v-bind:key="category.i18n_name" v-bind:to="category.router_link">{{ $t(category.i18n_name) }}</b-dropdown-item>
+                    </b-nav-item-dropdown>
+                    <b-nav-item to="/addRecipe" exact exact-active-class="active">{{ $t('header.addRecipe') }}</b-nav-item>
+                    <b-nav-item to="/myAccount" exact exact-active-class="active">{{ $t('header.myAccount') }}</b-nav-item>
+                    <b-nav-item to="/about" exact exact-active-class="active">{{ $t('header.aboutUs') }}</b-nav-item>
                 </b-navbar-nav>
 
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-form>
-                        <b-form-input id="searchbar" size="sm" class="mr-sm-2" v-bind:placeholder="$t('header.search')"></b-form-input>
+                    <b-nav-form action="/searchall">
+                        <b-form-input id="searchbar" name ="query" size="sm" class="mr-sm-2" v-bind:placeholder="$t('header.search')"></b-form-input>
                         <b-button size="sm" class="my-2 my-sm-0" type="submit"> <b-icon-search /> </b-button>
                     </b-nav-form>
 
@@ -32,10 +34,19 @@
 </template>
 
 <script>
-    import i18n from '@/plugins/i18n';
+    import i18n from '@/plugins/i18n.js';
+    import categories from '@/data/categories.js'
 
     export default {
         name: 'Header',
+        data: function() {
+            return {
+                categories: categories
+            }
+        },
+        created() {
+            //alert(categories[0].name);
+        },
         methods: {
             changeLocale(locale) {
                 i18n.locale = locale;
