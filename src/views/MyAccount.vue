@@ -16,10 +16,10 @@
                             <b-form-group id="loginUsernameGroup"
                                           v-bind:label="$t('account.username')"
                                           label-for="loginUsername">
-                                <!-- v-model="nesto" in form input -->
                                 <b-form-input id="loginUsername"
                                               type="text"
                                               v-bind:placeholder="$t('account.username')"
+                                              v-model="loginUsername"
                                               required>
                                 </b-form-input>
                             </b-form-group>
@@ -29,8 +29,9 @@
                                           label-for="loginPassword">
                                 <!-- v-model="nesto" in form input -->
                                 <b-form-input id="loginPassword"
-                                              type="text"
+                                              type="password"
                                               v-bind:placeholder="$t('account.password')"
+                                              v-model="loginPassword"
                                               required>
                                 </b-form-input>
                             </b-form-group>
@@ -40,13 +41,37 @@
                     </b-card>
                 </b-col>
                 <b-col id="register-col" cols="12" lg="6">
-                    <b-card v-bind:title="$t('account.register')"
+                    <b-card v-bind:header="$t('account.register')"
+                            header-bg-variant="warning"
+                            header-border-variant="warning"
+                            header-text-variant="dark"
+                            border-variant="warning"
                             class="mb-2">
-                        <b-card-text>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </b-card-text>
-
-                        <b-button href="#" variant="primary">Go somewhere</b-button>
+                        <b-form @submit="registerSubmit">
+                            <b-form-group id="registerUsernameGroup"
+                                          v-bind:label="$t('account.username')"
+                                          label-for="registerUsername">
+                                <b-form-input id="registerUsername"
+                                              type="text"
+                                              v-bind:placeholder="$t('account.username')"
+                                              v-model="registerUsername"
+                                              required>
+                                </b-form-input>
+                            </b-form-group>
+                            <br />
+                            <b-form-group id="registerPasswordGroup"
+                                          v-bind:label="$t('account.password')"
+                                          label-for="registerPassword">
+                                <b-form-input id="registerPassword"
+                                              type="password"
+                                              v-bind:placeholder="$t('account.password')"
+                                              v-model="registerUsername"
+                                              required>
+                                </b-form-input>
+                            </b-form-group>
+                            <br />
+                            <b-button type="submit" variant="warning">{{ $t('account.register') }}!</b-button>
+                        </b-form>
                     </b-card>
                 </b-col>
             </b-row>
@@ -66,6 +91,10 @@
             loginSubmit(event) {
                 event.preventDefault();
                 alert("login submitted");
+            },
+            registerSubmit(event) {
+                event.preventDefault();
+                alert("register submitted");
             }
         }
     }
