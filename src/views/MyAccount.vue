@@ -19,7 +19,7 @@
                                 <b-form-input id="loginUsername"
                                               type="text"
                                               v-bind:placeholder="$t('account.username')"
-                                              v-model="loginUsername"
+                                              v-model="logUser"
                                               required>
                                 </b-form-input>
                             </b-form-group>
@@ -31,7 +31,7 @@
                                 <b-form-input id="loginPassword"
                                               type="password"
                                               v-bind:placeholder="$t('account.password')"
-                                              v-model="loginPassword"
+                                              v-model="logPass"
                                               required>
                                 </b-form-input>
                             </b-form-group>
@@ -54,7 +54,7 @@
                                 <b-form-input id="registerUsername"
                                               type="text"
                                               v-bind:placeholder="$t('account.username')"
-                                              v-model="registerUsername"
+                                              v-model="regUser"
                                               required>
                                 </b-form-input>
                             </b-form-group>
@@ -65,11 +65,12 @@
                                 <b-form-input id="registerPassword"
                                               type="password"
                                               v-bind:placeholder="$t('account.password')"
-                                              v-model="registerUsername"
+                                              v-model="regPass"
                                               required>
                                 </b-form-input>
                             </b-form-group>
                             <br />
+                            <p class="text-danger"> {{ regError }} </p>
                             <b-button type="submit" variant="warning">{{ $t('account.register') }}!</b-button>
                         </b-form>
                     </b-card>
@@ -87,14 +88,50 @@
 
 <script>
     export default {
+        data: function () {
+            return {
+                logUser: "",
+                logPass: "",
+                logError: "",
+                regUser: "",
+                regPass: "",
+                regError: "",
+            };
+        },
         methods: {
             loginSubmit(event) {
                 event.preventDefault();
-                alert("login submitted");
+                alert(this.logUser);
             },
             registerSubmit(event) {
                 event.preventDefault();
-                alert("register submitted");
+
+                let allUsers = JSON.parse(localStorage.getItem('allUsers'));
+
+                if (allUsers == null) {
+                    allUsers = [];
+                }
+
+                let newId = 0;
+                for (let i = 0; i < allUsers.length; ++i) {
+                    let user = allUsers[i];
+                    console.log(user.username);
+                    if (user.username.localeCompare(this.regUser) == 0) {
+                        this.regError = this.$t('account.error.userExists');
+                        return;
+                    }
+                    newId = Math.max(newId, user.id + 1);
+                }
+
+                let newUser = {
+                    username: this.regUser,
+                    password: this.regPass,
+                    id: newId,
+                }
+
+                allUsers.push(newUser);
+
+                localStorage.setItem('allUsers', JSON.stringify(allUsers));
             }
         }
     }

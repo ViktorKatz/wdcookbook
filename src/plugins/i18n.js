@@ -14,6 +14,9 @@ const messages = {
             password: 'Šifra',
             usernamedesc: 'Korisničko ime se sastoji samo od slova i brojeva',
             passworddesc: 'Šifra mora imati makar 8 karaktera',
+            error: {
+                userExists: 'Već postoji korisnik sa tim korisničkim imenom',
+            },
         },
         categories: {
             appetizers: 'Predjela',
