@@ -6,6 +6,24 @@ Vue.use(VueI18n);
 // We group this by a page or a component.
 const messages = {
     'sr': {
+        account: {
+            pagedesc: 'Ulogujte se ili napravite novi nalog',
+            login: 'Ulogujte se',
+            register: 'Napravite nov nalog',
+            username: 'Korisničko ime',
+            password: 'Šifra',
+            usernamedesc: 'Korisničko ime se sastoji samo od slova i brojeva',
+            passworddesc: 'Šifra mora imati makar 8 karaktera',
+            greeting: 'Zdravo',
+            yourRecipes: 'Vaši recepti',
+            logout: 'Izloguj se',
+            logoutQuestion: 'Da li želite da se izlogujete?',
+            error: {
+                userExists: 'Već postoji korisnik sa tim korisničkim imenom',
+                userNotFound: 'Korisnik sa tim korisničkim imenom nije pronađen',
+                wrongPassword: 'Uneta šifra nije ispravna',
+            },
+        },
         categories: {
             appetizers: 'Predjela',
             mainCourses: 'Glavna jela',
@@ -22,7 +40,7 @@ const messages = {
             aboutUs: 'O nama',
         },
         homepage: {
-            welcomeMsg: 'Dobrodošli na cookbook!',
+            welcomeMsg: 'TEST PODATAK SRB: Dobrodošli na cookbook!',
         }
     },
     'en': {
@@ -31,7 +49,7 @@ const messages = {
             search: 'Search',
         },
         homepage: {
-            welcomeMsg: 'Welcome to the cookbook!',
+            welcomeMsg: 'TEST DATA ENG: Welcome to the cookbook!',
         }
     },
 };

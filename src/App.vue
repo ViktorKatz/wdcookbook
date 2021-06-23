@@ -1,9 +1,18 @@
 <template>
     <div id="app">
         <Header />
-        <div id="router-view">
-            <router-view />
-        </div>
+        <b-container fluid>
+            <b-row>
+                <b-col cols="12" lg="9">
+                    <div id="router-view">
+                        <router-view />
+                    </div>
+                </b-col>
+                <b-col cols="12" sm="10" offset-sm="1" md="8" offset-md="2" lg="3" offset-lg="0">
+                    <AdSpace />
+                </b-col>
+            </b-row>
+        </b-container>
         <Footer />
     </div>
 </template>
@@ -11,11 +20,12 @@
 <script>
     import Header from '@/components/Header.vue';
     import Footer from '@/components/Footer.vue';
+    import AdSpace from '@/components/AdSpace.vue'
 
     export default {
         name: 'App',
         components: {
-            Header, Footer
+            Header, Footer, AdSpace
         }
     }
 </script>
