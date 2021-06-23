@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <div id="navdiv">
         <b-navbar id="navbar" toggleable="lg" sticky variant="warning">
             <b-navbar-brand to="/"> <b-icon-book-half /> CookBook</b-navbar-brand>
