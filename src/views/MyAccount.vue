@@ -3,7 +3,20 @@
         <b-container fluid v-if="loggedUserId">
             <br />
             <b-row>
-                <h1>{{ $t('account.greeting') }}, {{ loggedUserUsername }}!</h1>
+                <b-col cols="12" lg="6">
+                    <h1>{{ $t('account.greeting') }}, {{ loggedUserUsername }}!</h1>
+                </b-col>
+                <b-col cols="12" lg="6">
+                    <h3>{{ $t('account.logoutQuestion') }}</h3>
+                    <b-button @click="logout" variant="danger">{{ $t('account.logout') }}</b-button>
+                </b-col>
+            </b-row>
+            <hr />
+            <b-row>
+                <b-col>
+                    <h2>{{ $t('account.yourRecipes') }}:</h2>
+                    <AllRecipesForId v-bind:userId="loggedUserId" />
+                </b-col>
             </b-row>
         </b-container>
         <b-container fluid v-else>
@@ -93,7 +106,12 @@
 </style>
 
 <script>
+    import AllRecipesForId from '@/components/AllRecipesForId';
+
     export default {
+        components: {
+            AllRecipesForId
+        },
         data: function () {
             return {
                 logUser: "",
@@ -102,8 +120,8 @@
                 regUser: "",
                 regPass: "",
                 regError: "",
-                loggedUserId: "",
-                loggedUserUsername: "",
+                loggedUserId: null,
+                loggedUserUsername: null,
             };
         },
         created() {
@@ -175,6 +193,12 @@
                 allUsers.push(newUser);
 
                 localStorage.setItem('allUsers', JSON.stringify(allUsers));
+            },
+            logout() {
+                this.loggedUserId = null;
+                this.loggedUserUsername = null;
+                localStorage.removeItem('loggedUserId');
+                localStorage.removeItem('loggedUserUsername');
             }
         }
     }

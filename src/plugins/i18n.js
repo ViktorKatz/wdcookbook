@@ -15,6 +15,9 @@ const messages = {
             usernamedesc: 'Korisničko ime se sastoji samo od slova i brojeva',
             passworddesc: 'Šifra mora imati makar 8 karaktera',
             greeting: 'Zdravo',
+            yourRecipes: 'Vaši recepti',
+            logout: 'Izloguj se',
+            logoutQuestion: 'Da li želite da se izlogujete?',
             error: {
                 userExists: 'Već postoji korisnik sa tim korisničkim imenom',
                 userNotFound: 'Korisnik sa tim korisničkim imenom nije pronađen',
