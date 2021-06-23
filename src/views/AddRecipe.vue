@@ -39,7 +39,8 @@
                                         label-for="recipeType">
                             <b-form-select id="recipeType"
                                         required
-                                        v-model="type">
+                                        v-model="type"
+                                        style="padding:8px">
                                         <option v-for="cat in categories" v-bind:key="cat.id" :value="cat.id">{{$t(cat.i18n_name)}}</option>
                             </b-form-select>
                         </b-form-group>
@@ -51,8 +52,10 @@
                                         label-for="duration">
                             <b-form-input id="duration"
                                         v-model="duration"
-                                        type="text"
-                                        required>
+                                        type="number"
+                                        required
+                                        min="0"
+                                        max="600">
                             </b-form-input>
                         </b-form-group>
                         <br />
@@ -147,6 +150,7 @@ import categories from '@/data/categories.js'
                 allRecipes.push(recipe);
 
                 localStorage.setItem("recipes", JSON.stringify(allRecipes));
+                this.$router.push('myAccount');
                 return;
             }
         },

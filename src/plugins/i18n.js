@@ -29,7 +29,7 @@ const messages = {
             pagedesc: "Dodavanje novog recepta",
             name: "Ime",
             type: "Kategorija",
-            duration: "Dužina u minutima",
+            duration: "Dužina pripreme u minutima",
             difficulty: "Težina pripreme",
             instructions: "Uputsvo za pripremu",
             add: "Dodaj"
