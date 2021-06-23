@@ -1,6 +1,12 @@
 <template>
     <div class="myAccount">
-        <b-container fluid>
+        <b-container fluid v-if="loggedUserId">
+            <br />
+            <b-row>
+                <h1>{{ $t('account.greeting') }}, {{ loggedUserUsername }}!</h1>
+            </b-row>
+        </b-container>
+        <b-container fluid v-else>
             <b-row id="pagedesc">
                 <h1>{{ $t('account.pagedesc') }}</h1>
             </b-row>
@@ -27,7 +33,6 @@
                             <b-form-group id="loginPasswordGroup"
                                           v-bind:label="$t('account.password')"
                                           label-for="loginPassword">
-                                <!-- v-model="nesto" in form input -->
                                 <b-form-input id="loginPassword"
                                               type="password"
                                               v-bind:placeholder="$t('account.password')"
@@ -97,7 +102,13 @@
                 regUser: "",
                 regPass: "",
                 regError: "",
+                loggedUserId: "",
+                loggedUserUsername: "",
             };
+        },
+        created() {
+            this.loggedUserId = localStorage.getItem('loggedUserId');
+            this.loggedUserUsername = localStorage.getItem('loggedUserUsername');
         },
         methods: {
             loginSubmit(event) {
@@ -117,6 +128,10 @@
                         if (user.password.localeCompare(this.logPass) == 0) {
                             localStorage.setItem('loggedUserId', user.id);
                             localStorage.setItem('loggedUserUsername', user.username);
+
+                            this.loggedUserId = user.id;
+                            this.loggedUserUsername = user.username;
+
                             this.logError = "";
                             return;
                         }
@@ -139,7 +154,7 @@
                     allUsers = [];
                 }
 
-                let newId = 0;
+                let newId = 1;
                 for (let i = 0; i < allUsers.length; ++i) {
                     let user = allUsers[i];
                     if (user.username.localeCompare(this.regUser) == 0) {
