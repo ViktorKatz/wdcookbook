@@ -3,10 +3,13 @@
         <Header />
         <b-container fluid>
             <b-row>
-                <b-col cols="12" md="10" lg="8">
+                <b-col cols="12" lg="9">
                     <div id="router-view">
                         <router-view />
                     </div>
+                </b-col>
+                <b-col cols="12" sm="10" offset-sm="1" md="8" offset-md="2" lg="3" offset-lg="0">
+                    <AdSpace />
                 </b-col>
             </b-row>
         </b-container>
@@ -16,11 +19,12 @@
 
 <script>
     import Header from '@/components/Header.vue';
+    import AdSpace from '@/components/AdSpace.vue'
 
     export default {
         name: 'App',
         components: {
-            Header
+            Header, AdSpace
         }
     }
 </script>
@@ -47,9 +51,4 @@
             #nav a.router-link-exact-active {
                 color: #42b983;
             }
-
-    #router-view {
-        border:5px solid black;
-        min-height: calc(100vh - 211px); /* 100% visine viewporta - visina footera */
-    }
 </style>
