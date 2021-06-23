@@ -8,8 +8,8 @@
 // localStorage.setItem('recipes', updatedRecipes);
 //
 // Fields:
-// id - not necessary for now
-// category - id
+// id - to access recipe details via URL
+// category - category id
 // title - title
 // desc - preparation instructions
 // difficulty - number 1-5
