@@ -140,7 +140,7 @@ import categories from '@/data/categories.js'
                 if (lastId == null) lastId = -1;
                 console.log(lastId);
                 let recipe = {  id: lastId + 1,
-                                userId: this.loggedUserId,
+                                userId: parseInt(this.loggedUserId),
                                 title: this.name,
                                 category: parseInt(this.type),
                                 desc: this.instructions,
