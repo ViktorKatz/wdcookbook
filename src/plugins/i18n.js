@@ -16,6 +16,8 @@ const messages = {
             passworddesc: 'Šifra mora imati makar 8 karaktera',
             error: {
                 userExists: 'Već postoji korisnik sa tim korisničkim imenom',
+                userNotFound: 'Korisnik sa tim korisničkim imenom nije pronađen',
+                wrongPassword: 'Uneta šifra nije ispravna',
             },
         },
         categories: {

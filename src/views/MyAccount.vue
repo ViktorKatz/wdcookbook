@@ -36,6 +36,7 @@
                                 </b-form-input>
                             </b-form-group>
                             <br />
+                            <p class="text-danger"> {{ logError }} </p>
                             <b-button type="submit" variant="warning">{{ $t('account.login') }}!</b-button>
                         </b-form>
                     </b-card>
@@ -101,7 +102,33 @@
         methods: {
             loginSubmit(event) {
                 event.preventDefault();
-                alert(this.logUser);
+                let allUsers = JSON.parse(localStorage.getItem('allUsers'));
+
+                if (allUsers == null) {
+                    this.logError = this.$t('account.error.userNotFound');
+                    return;
+                }
+
+                for (let i = 0; i < allUsers.length; ++i) {
+                    let user = allUsers[i];
+                    if (user.username.localeCompare(this.logUser) == 0) {
+                        // Found the user
+
+                        if (user.password.localeCompare(this.logPass) == 0) {
+                            localStorage.setItem('loggedUserId', user.id);
+                            localStorage.setItem('loggedUserUsername', user.username);
+                            this.logError = "";
+                            return;
+                        }
+                        else {
+                            this.logError = this.$t('account.error.wrongPassword');
+                            return;
+                        }
+                    }
+                }
+
+                this.logError = this.$t('account.error.userNotFound');
+                return;
             },
             registerSubmit(event) {
                 event.preventDefault();
@@ -115,13 +142,14 @@
                 let newId = 0;
                 for (let i = 0; i < allUsers.length; ++i) {
                     let user = allUsers[i];
-                    console.log(user.username);
                     if (user.username.localeCompare(this.regUser) == 0) {
                         this.regError = this.$t('account.error.userExists');
                         return;
                     }
                     newId = Math.max(newId, user.id + 1);
                 }
+
+                this.regError = "";
 
                 let newUser = {
                     username: this.regUser,
