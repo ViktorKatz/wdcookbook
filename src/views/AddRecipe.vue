@@ -96,6 +96,9 @@
     #pagedesc {
         margin: 20px;
     }
+    #recipeType {
+        width: 100%;
+    }
 </style>
 
 <script>

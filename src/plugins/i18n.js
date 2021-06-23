@@ -25,7 +25,14 @@ const messages = {
             },
         },
         addRecipe: {
-            login: "Molimo vas da se ulogujete da biste dodali recept"
+            login: "Molimo vas da se ulogujete da biste dodali recept",
+            pagedesc: "Dodavanje novog recepta",
+            name: "Ime",
+            type: "Kategorija",
+            duration: "Dužina u minutima",
+            difficulty: "Težina pripreme",
+            instructions: "Uputsvo za pripremu",
+            add: "Dodaj"
         },
         categories: {
             appetizers: 'Predjela',
