@@ -141,11 +141,15 @@ import categories from '@/data/categories.js'
                 console.log(lastId);
                 let recipe = {  id: lastId + 1,
                                 userId: this.loggedUserId,
-                                name: this.name,
-                                type: this.type,
-                                instructions: this.instructions,
-                                duration: this.duration,
-                                difficulty: this.difficulty
+                                title: this.name,
+                                category: this.type,
+                                desc: this.instructions,
+                                preptime: this.duration,
+                                difficulty: this.difficulty,
+                                videos: [],
+                                ratings: [],
+                                pictures: [],
+                                comments: []
                             }
                 allRecipes.push(recipe);
 

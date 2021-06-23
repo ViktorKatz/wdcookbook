@@ -22,6 +22,7 @@
 const defaultRecipes = [
     {
         id: 1,
+        userId: 1,
         category: 2,
         title: 'Sarme',
         desc: 'Staviti sarmu u lonac',
@@ -36,6 +37,7 @@ const defaultRecipes = [
         ]
     },
     {
+        userId: 1,
         id: 2,
         category: 2,
         title: 'Kaneloni sa pesto sosom',
@@ -51,6 +53,7 @@ const defaultRecipes = [
         ]
     },
     {
+        userId: 1,
         id: 3,
         category: 2,
         title: 'Losos na žarku',
