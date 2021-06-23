@@ -24,6 +24,9 @@ const messages = {
                 wrongPassword: 'Uneta šifra nije ispravna',
             },
         },
+        addRecipe: {
+            login: "Molimo vas da se ulogujete da biste dodali recept"
+        },
         categories: {
             appetizers: 'Predjela',
             mainCourses: 'Glavna jela',
