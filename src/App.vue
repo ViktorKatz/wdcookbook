@@ -1,7 +1,16 @@
 <template>
     <div id="app">
         <Header />
-        <router-view />
+        <b-container fluid>
+            <b-row>
+                <b-col cols="12" md="10" lg="8">
+                    <div id="router-view">
+                        <router-view />
+                    </div>
+                </b-col>
+            </b-row>
+        </b-container>
+        <Footer />
     </div>
 </template>
 
@@ -38,4 +47,9 @@
             #nav a.router-link-exact-active {
                 color: #42b983;
             }
+
+    #router-view {
+        border:5px solid black;
+        min-height: calc(100vh - 211px); /* 100% visine viewporta - visina footera */
+    }
 </style>
