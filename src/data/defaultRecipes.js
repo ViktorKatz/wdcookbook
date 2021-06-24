@@ -46,7 +46,7 @@ const defaultRecipes = [
         preptime: 75,
         ratings: [4, 2, 2, 3, 1, 4, 3],
         videos: [],
-        pictures: [],
+        pictures: ["https://bonapeti.rs/files/lib/600x350/kaneloni-mlqko-sos.JPG"],
         comments: [
             { username: 'Viktor', comment: 'Manje začina valja...' },
             { username: 'Dragan', comment: 'Njam njam' },
@@ -62,7 +62,7 @@ const defaultRecipes = [
         preptime: 45,
         ratings: [4, 2, 2, 3, 1, 4, 3],
         videos: [],
-        pictures: [],
+        pictures: ["http://www.centarzdravlja.hr/site/assets/files/24757/riba61.jpg"],
         comments: [
             { username: 'Žarko', comment: 'Nisam ljubitelj ovoga.' },
             { username: 'Dragan', comment: 'Njam njam' },

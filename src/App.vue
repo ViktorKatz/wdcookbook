@@ -21,11 +21,16 @@
     import Header from '@/components/Header.vue';
     import Footer from '@/components/Footer.vue';
     import AdSpace from '@/components/AdSpace.vue'
+    import defaultRecipes from '@/data/defaultRecipes.js';
 
     export default {
         name: 'App',
         components: {
             Header, Footer, AdSpace
+        },
+        created() {
+            if (localStorage.getItem("recipes") == null)
+                localStorage.setItem("recipes", JSON.stringify(defaultRecipes));
         }
     }
 </script>
