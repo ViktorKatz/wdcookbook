@@ -6,6 +6,18 @@ Vue.use(VueI18n);
 // We group this by a page or a component.
 const messages = {
     'sr': {
+        about: {
+            title: 'O nama',
+            whereWeAre: 'Gde se nalazimo',
+            address: 'Adresa',
+            contact: 'Kontakt',
+            telephone: 'Telefon',
+            email: 'Elektronska pošta',
+            director: 'Upravnik',
+            altRole: 'Šef voznog parka',
+            aboutUsText: 'Portal CookBook.rs je osnovan 1912. godine sa ciljem da promoviše kulinarstvo među mladim ljudima širom sveta. Tokom šezdesetih godina prošlog veka, portal je pretrpeo velike promene i od tada se nudi na više od 1000 jezika. Danas portal posećuje više od četiri miliona korisnika mesečno, a samo neke od usluga koje nudi su recepti na srpskom jeziku, podrška vizuelne reprezentacije receptura, kao i kutak za najmlađe.',
+            missionAndVision: 'Misija i vizija',
+        },
         account: {
             pagedesc: 'Ulogujte se ili napravite novi nalog',
             login: 'Ulogujte se',
@@ -48,6 +60,9 @@ const messages = {
             addRecipe: 'Dodaj recept',
             myAccount: 'Moj nalog',
             aboutUs: 'O nama',
+        },
+        footer: {
+
         },
         homepage: {
             welcomeMsg: 'TEST PODATAK SRB: Dobrodošli na cookbook!',

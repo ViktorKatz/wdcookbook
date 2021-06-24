@@ -7,7 +7,16 @@ import i18n from '@/plugins/i18n';
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue/dist/bootstrap-vue.esm';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css';
+
+import * as VueGoogleMaps from 'vue2-google-maps';
+
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyAYDiEDtS1e-YaJSpB7CGKZAnxmAbmdSpo', // Viktorov key, ne pipati. Hvala lepo.
+        libraries: 'places',
+    }
+});
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;

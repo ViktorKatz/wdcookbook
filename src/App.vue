@@ -59,6 +59,11 @@
             }
 
     #router-view {
-        min-height: calc(100vh - 211px);  /* 100% visine viewporta - visina footera */
+        min-height: calc(100vh - 211px); /* 100% visine viewporta - visina footera */
+    }
+
+    .light-warning {
+        color: #664d03;
+        background-color: #fff3cd;
     }
 </style>
