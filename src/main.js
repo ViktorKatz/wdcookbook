@@ -23,9 +23,9 @@ Vue.use(VueGoogleMaps, {
 Vue.use(VueBreadcrumbs, {
     template:
         '        <nav v-if="$breadcrumbs.length" aria-label="breadcrumb">\n' +
-        '            <ol class="breadcrumb">\n' +
+        '            <ol class="breadcrumb mb-0 mt-0 px-4 light-warning">\n' +
         '                <li v-for="(crumb, key) in $breadcrumbs" v-if="crumb.meta.breadcrumb" :key="key" class="breadcrumb-item active" aria-current="page">\n' +
-        '                    {{ $t(getBreadcrumb(crumb.meta.breadcrumb)) }}' +
+        '                    > {{ $t(getBreadcrumb(crumb.meta.breadcrumb)) }}' +
         '                </li>\n' +
         '            </ol>\n' +
         '        </nav>'

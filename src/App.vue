@@ -4,7 +4,7 @@
         <b-container fluid>
             <b-row>
                 <b-col cols="12" lg="9">
-                    <Breadcrumbs />
+                    <Breadcrumbs id="breadCrumbs" />
                     <div id="router-view">
                         <router-view />
                     </div>
@@ -46,6 +46,12 @@
         color: #2c3e50;
     }
 
+    #breadCrumbs {
+        border: 2px solid #ffc107;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
     #nav {
         padding: 30px;
     }
@@ -65,6 +71,6 @@
 
     .light-warning {
         color: #664d03;
-        background-color: #fff3cd;
+        background-color: #fff3cd !important;
     }
 </style>
