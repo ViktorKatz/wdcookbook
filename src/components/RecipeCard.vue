@@ -1,7 +1,9 @@
 <template>
     <div>
         <b-card>
-            <b-card-header>
+            <b-card-header header-bg-variant="warning"
+                header-border-variant="warning"
+                border-variant="warning">
                 <div class="title">
                     <div>
                         <h3>{{title}}</h3>
@@ -14,17 +16,16 @@
             <b-card-body>
                 <b-row>
                     <b-col cols="12" lg="4">
-                        <img :src="picture" class="thumb">
+                        <b-card-img-lazy :src="picture" class="thumb" />
                     </b-col>
                     <b-col cols="12" lg="4">
-                        <h3>{{$t('recipe.rating')}}
-                        </h3>
-                        <b-rating readonly :value="rating" />
+                        <h3 class="pad">{{$t('recipe.rating')}}</h3>
+                        <b-rating variant="warning" readonly :value="rating" />
                     </b-col>
                     <b-col cols="12" lg="4">
-                        <h3>{{$t('recipe.difficulty')}}</h3>
+                        <h3 class="pad">{{$t('recipe.difficulty')}}</h3>
                         <b-progress class="progress">
-                            <b-progress-bar role="progressbar" :value="difficulty" min="0" max="5">
+                            <b-progress-bar variant="danger" role="progressbar" :value="difficulty" min="0" max="5">
                             </b-progress-bar>
                         </b-progress>
                     </b-col>
@@ -38,8 +39,8 @@
 .thumb {
     width:100%;
 }
-h3 {
-    margin-bottom: 30px;
+.pad {
+    margin-bottom: 40px;
 }
 .progress {
     height: 30px;
@@ -66,15 +67,8 @@ import categories from '@/data/categories.js'
         },
         data() {
             return {
-                stars: [],
                 categories: categories
             }
-        },
-        created() {
-            for (let i = 0; i < this.rating; ++i) {
-                this.stars.push(i);
-            }
-            console.log(this.categories);
         }
     }
 
