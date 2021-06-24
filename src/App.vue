@@ -4,6 +4,7 @@
         <b-container fluid>
             <b-row>
                 <b-col cols="12" lg="9">
+                    <Breadcrumbs />
                     <div id="router-view">
                         <router-view />
                     </div>
