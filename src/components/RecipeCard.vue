@@ -20,11 +20,11 @@
                     </b-col>
                     <b-col cols="12" lg="4">
                         <h3 class="pad">{{$t('recipe.rating')}}</h3>
-                        <b-rating variant="warning" readonly :value="rating" />
+                        <b-rating class="pad" variant="warning" readonly :value="rating" />
                     </b-col>
                     <b-col cols="12" lg="4">
                         <h3 class="pad">{{$t('recipe.difficulty')}}</h3>
-                        <b-progress class="progress">
+                        <b-progress class="progress pad">
                             <b-progress-bar variant="danger" role="progressbar" :value="difficulty" min="0" max="5">
                             </b-progress-bar>
                         </b-progress>
