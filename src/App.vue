@@ -28,9 +28,9 @@
         components: {
             Header, Footer, AdSpace
         },
-        create() {
+        created() {
             if (localStorage.getItem("recipes") == null)
-                localStorage.setItem("recipes", defaultRecipes);
+                localStorage.setItem("recipes", JSON.stringify(defaultRecipes));
         }
     }
 </script>
