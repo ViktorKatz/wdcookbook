@@ -51,6 +51,10 @@ const messages = {
         },
         homepage: {
             welcomeMsg: 'TEST PODATAK SRB: Dobrodošli na cookbook!',
+        },
+        recipe: {
+            rating: 'Ocena',
+            difficulty: 'Težina pripreme'
         }
     },
     'en': {

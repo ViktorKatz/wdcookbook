@@ -125,7 +125,7 @@
             };
         },
         created() {
-            this.loggedUserId = localStorage.getItem('loggedUserId');
+            this.loggedUserId = parseInt(localStorage.getItem('loggedUserId'));
             this.loggedUserUsername = localStorage.getItem('loggedUserUsername');
         },
         methods: {
