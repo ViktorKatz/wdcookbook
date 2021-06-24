@@ -72,7 +72,7 @@ const messages = {
             difficulty: 'Težina pripreme'
         },
         breadcrumbs: {
-            home: 'Početna',
+            home: 'Početna stranica',
             about: 'O nama',
             myAccount: 'Moj nalog',
             addRecipe: 'Dodaj recept',
