@@ -65,13 +65,15 @@
                         <b-form-group id="recipeDifficultyGroup"
                                         v-bind:label="$t('addRecipe.difficulty')"
                                         label-for="recipeDifficulty">
-                            <b-form-input type="number"
-                                            value="1"
-                                            min="1"
-                                            max="5"
-                                            v-model="difficulty"
-                                            required>
-                            </b-form-input>
+                            <b-form-radio-group class="diff" required>
+                            <b-form-radio class="radio"
+                                            v-for="val in 5"
+                                            :key="val"
+                                            name="difficulty"
+                                            :value="val"
+                                            v-model="difficulty">
+                            </b-form-radio>
+                            </b-form-radio-group>
                         </b-form-group>
                         <br />
                         <p class="text-danger"> {{ error }} </p>
@@ -101,6 +103,15 @@
     }
     #recipeType {
         width: 100%;
+    }
+    .diff {
+        display: flex;
+        flex-direction: row;
+        justify-content: center   
+    }
+    .radio {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 </style>
 
