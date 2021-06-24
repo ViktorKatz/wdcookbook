@@ -70,6 +70,12 @@ const messages = {
         recipe: {
             rating: 'Ocena',
             difficulty: 'Težina pripreme'
+        },
+        breadcrumbs: {
+            home: 'Početna stranica',
+            about: 'O nama',
+            myAccount: 'Moj nalog',
+            addRecipe: 'Dodaj recept',
         }
     },
     'en': {

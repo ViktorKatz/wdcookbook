@@ -4,6 +4,7 @@
         <b-container fluid>
             <b-row>
                 <b-col cols="12" lg="9">
+                    <Breadcrumbs id="breadCrumbs" />
                     <div id="router-view">
                         <router-view />
                     </div>
@@ -62,8 +63,18 @@
         min-height: calc(100vh - 211px); /* 100% visine viewporta - visina footera */
     }
 
+    #breadCrumbs {
+        border: 2px solid #ffc107;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: var(--bs-breadcrumb-divider, ">") !important; /* To overwrite the default divider '/' */
+    }
+
     .light-warning {
         color: #664d03;
-        background-color: #fff3cd;
+        background-color: #fff3cd !important;
     }
 </style>
