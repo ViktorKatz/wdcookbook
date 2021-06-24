@@ -72,6 +72,7 @@
                                             name="difficulty"
                                             :value="val"
                                             v-model="difficulty">
+                                &nbsp; {{val}}
                             </b-form-radio>
                             </b-form-radio-group>
                         </b-form-group>
