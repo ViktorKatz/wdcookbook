@@ -10,7 +10,7 @@
                 <b-col cols="12" lg="6">
                     <b-card :header="$t('about.missionAndVision')"
                             header-bg-variant="warning"
-                            variant="light-yellow"
+                            bg-variant="warning"
                             body-class="light-warning">
                         <b-card-body>
                             <b-card-text>
@@ -51,9 +51,8 @@
                 <b-col cols="12">
                     <b-card :header="$t('about.whereWeAre')"
                             header-bg-variant="warning"
-                            variant="light-yellow"
-                            body-class="light-warning"
-                            >
+                            bg-variant="warning"
+                            body-class="light-warning">
                         <b-card-body>
                             <GmapMap :center='mapcenter'
                                      :zoom='14'
