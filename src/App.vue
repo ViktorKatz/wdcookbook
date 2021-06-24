@@ -46,12 +46,6 @@
         color: #2c3e50;
     }
 
-    #breadCrumbs {
-        border: 2px solid #ffc107;
-        border-bottom-left-radius: 0.25rem;
-        border-bottom-right-radius: 0.25rem;
-    }
-
     #nav {
         padding: 30px;
     }
@@ -67,6 +61,16 @@
 
     #router-view {
         min-height: calc(100vh - 211px); /* 100% visine viewporta - visina footera */
+    }
+
+    #breadCrumbs {
+        border: 2px solid #ffc107;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: var(--bs-breadcrumb-divider, ">") !important; /* To overwrite the default divider '/' */
     }
 
     .light-warning {
