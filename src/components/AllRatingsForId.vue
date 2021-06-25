@@ -1,11 +1,11 @@
 <template>
-    <div id="AllCommentsForId">
-        <CommentCard v-for="comment in this.myComments"
-                    :key="comment.title"
-                    :title="comment.title"
-                    :comment="comment.comment"
-                    :user="comment.user">
-        </CommentCard>
+    <div id="AllRatingsForId">
+        <RatingCard v-for="rating in this.myRatings"
+                    :key="rating.title"
+                    :title="rating.title"
+                    :user="rating.user"
+                    :rating="rating.rating">
+        </RatingCard>
     </div>
 </template>
 
@@ -13,16 +13,16 @@
 </style>
 
 <script>
-import CommentCard from './CommentCard.vue'
+import RatingCard from './RatingCard.vue'
     export default {
-        components: { CommentCard },
-        name: 'AllCommentsForId',
+        components: { RatingCard },
+        name: 'AllRatingsForId',
         props: {
             userId: Number  
         },
         data() {
             return {
-                myComments: [],
+                myRatings: [],
                 user: null
             }
         },
@@ -33,15 +33,16 @@ import CommentCard from './CommentCard.vue'
             let allUsers = JSON.parse(localStorage.getItem("allUsers"));
             this.user = allUsers[this.userId - 1];
             allRecipes.forEach(e => {
-                e.comments.forEach(c => {
+                e.ratings.forEach(c => {
                     if (c.userId == this.userId)
-                        this.myComments.push({
-                            comment: c.comment,
+                        this.myRatings.push({
+                            rating: c.rating,
                             title: e.title,
                             user: allUsers[this.userId - 1].username
                         });
                 });
             });
+        console.log(this.myRatings);
         }
     }
 

@@ -12,7 +12,7 @@
             </b-card-header>
             <b-card-body>
                 <b-row>
-                    {{comment}}
+                    <b-rating class="pad" variant="warning" readonly :value="rating" />
                 </b-row>
             </b-card-body>
         </b-card>
@@ -49,7 +49,7 @@ import categories from '@/data/categories.js'
         name: 'CommentCard',
         props: {
             title: String,
-            comment: String,
+            rating: Number,
             user: String
         },
         methods: {

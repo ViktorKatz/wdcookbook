@@ -30,6 +30,15 @@
                 </b-col>
             </b-row>
             <hr />
+            <b-row>
+                <b-col>
+                    <b-button v-b-toggle="'ratings'" variant="warning">{{$t('account.yourRatings')}}</b-button>
+                    <b-collapse id="ratings">
+                        <AllRatingsForId v-bind:userId="loggedUserId" />
+                    </b-collapse>
+                </b-col>
+            </b-row>
+            <hr />
         </b-container>
         <b-container fluid v-else>
             <b-row id="pagedesc">
@@ -120,11 +129,13 @@
 <script>
     import AllCommentsForId from '@/components/AllCommentsForId';
     import AllRecipesForId from '@/components/AllRecipesForId';
+    import AllRatingsForId from '@/components/AllRatingsForId';
 
     export default {
         components: {
             AllRecipesForId,
-            AllCommentsForId
+            AllCommentsForId,
+            AllRatingsForId
         },
         data: function () {
             return {

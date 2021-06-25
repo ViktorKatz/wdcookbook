@@ -43,7 +43,6 @@ import RecipeCard from './RecipeCard.vue'
         },
         created() {
             this.allRecipes = JSON.parse(localStorage.getItem("recipes")).filter(e => e.userId == this.userId)
-            console.log(this.allRecipes);
         }
     }
 
