@@ -7,8 +7,19 @@
         <b-row>
           <b-col cols="12" lg="6">
             <h3> {{$t('recipe.instructions')}} </h3>
+            {{recipe.desc}}
+          </b-col>
+          <b-col cols="12" lg="6">
+            <iframe width="100%" height="315"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              :src="recipe.videos[0]">
+            </iframe>
           </b-col>
         </b-row>
+        <hr />
       </b-container>
     </div>
 </template>
