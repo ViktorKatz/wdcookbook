@@ -52,40 +52,34 @@
 </template>
 
 <style scoped>
-    a {
-        text-decoration: none;
-        color: #2c3e50;
-    }
-
-    .thumb {
-        width: 100%;
-    }
-
-    .pad {
-        margin-bottom: 40px;
-    }
-
-    .progress {
-        height: 30px;
-    }
-
-    .title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .trash {
-        width: 100%;
-    }
-
-    .trash-b {
-        width: 15%;
-        padding: 5px;
-    }
+a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+.thumb {
+    width:100%;
+}
+.pad {
+    margin-bottom: 40px;
+}
+.progress {
+    height: 30px;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.trash {
+    width:100%;
+}
+.trash-b {
+    width: 15%;
+    padding: 5px;
+}
 </style>
 <script>
-    import categories from '@/data/categories.js'
+import categories from '@/data/categories.js'
 
     export default {
         name: 'RecipeCard',
