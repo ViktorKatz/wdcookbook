@@ -8,7 +8,7 @@
           <b-col cols="6" lg="6">
               <h3 class="pad">{{$t('recipe.rating')}}</h3>
               <div @mouseenter="enterRate()" @mouseleave="leaveRate()">
-              <b-rating class="pad" :variant="rateHover?'warning':'info'" :value="getRating()" v-model="rating" @change="rate"/>
+                <b-rating class="pad" :variant="rateHover?'warning':'info'" :value="getRating()" v-model="rating" @change="rate"/>
               </div>
           </b-col>
           <b-col cols="6" lg="6">
@@ -36,6 +36,12 @@
           </b-col>
         </b-row>
         <hr />
+        <h3>{{$t('recipe.comments')}}</h3>
+        <CommentCard v-for="comment in this.recipe.comments"
+                      :key="comment.comment"
+                      :user="users[comment.userId - 1].username"
+                      :comment="comment.comment">
+        </CommentCard>
       </b-container>
     </div>
 </template>
@@ -47,10 +53,12 @@ h3 {
 </style>
 <script>
 import categories from '@/data/categories.js'
+import CommentCard from '../components/CommentCard.vue'
 
 export default {
   name: 'Recipe',
   components: {
+    CommentCard
   },
   data() {
     return {
@@ -61,7 +69,8 @@ export default {
       username: null,
       rating: null,
       recipes: [],
-      rateHover : false
+      rateHover : false,
+      users: JSON.parse(localStorage.getItem('allUsers'))
     }
   },
   created() {

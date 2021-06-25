@@ -77,7 +77,8 @@ const messages = {
             rating: 'Ocena',
             difficulty: 'Težina pripreme',
             by: 'od',
-            instructions: 'Upustvo za pripremu'
+            instructions: 'Upustvo za pripremu',
+            comments: 'Komentari'
         },
         breadcrumbs: {
             home: 'Početna stranica',
