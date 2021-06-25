@@ -83,7 +83,8 @@ const messages = {
             next: 'Sledeća',
             prev: 'Prethodna',
             noVideo: 'Video nije dostupan',
-            addComment: 'Komentariši'
+            addComment: 'Komentariši',
+            duration: 'Vreme pripreme'
         },
         breadcrumbs: {
             home: 'Početna stranica',

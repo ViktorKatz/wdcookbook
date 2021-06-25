@@ -5,18 +5,22 @@
         {{$t('recipe.by')}} {{username}}
         <hr />
         <b-row>
-          <b-col cols="6" lg="6">
-              <h3 class="pad">{{$t('recipe.rating')}}</h3>
+          <b-col cols="12" lg="4">
+              <h3 class="title">{{$t('recipe.rating')}}</h3>
               <div @mouseenter="enterRate()" @mouseleave="leaveRate()">
                 <b-rating class="pad" :variant="rateHover?'warning':'info'" :value="getRating()" v-model="rating" @change="rate"/>
               </div>
           </b-col>
-          <b-col cols="6" lg="6">
-              <h3 class="pad">{{$t('recipe.difficulty')}}</h3>
+          <b-col cols="6" lg="4">
+              <h3 class="title">{{$t('recipe.difficulty')}}</h3>
               <b-progress class="progress pad">
                   <b-progress-bar variant="danger" role="progressbar" :value="recipe.difficulty" min="0" max="5">
                   </b-progress-bar>
               </b-progress>
+          </b-col>
+          <b-col cols="6" lg="4">
+            <h3>{{$t('recipe.duration')}}</h3>
+            <h3>{{recipe.preptime}} min</h3>
           </b-col>
         </b-row>
         <hr />
@@ -45,7 +49,7 @@
                     indicators
                     :label-next="$t('recipe.next')"
                     :label-prev="$t('recipe.prev')"
-                    img-height="480">
+                    class="gallery">
           <b-carousel-slide v-for="pic in recipe.pictures" :key="pic" :img-src="pic">
           </b-carousel-slide>
         </b-carousel>
@@ -75,6 +79,9 @@ h3 {
 }
 .mb {
   margin: 10px;
+}
+.gallery {
+  height: 480px;
 }
 </style>
 <script>
