@@ -1,7 +1,7 @@
 ﻿<template>
     <div id="footer" class="bg-warning">
-        <b-jumbotron header="CookBook" lead="Kulinarski kutak">
-            <p id="copyright">Copyright 2021,  Viktor Katzenberger, Dragan Milovančević,  Odsek za softversko inženjerstvo Elektrotehničkog fakulteta univerziteta u Beogradu</p>
+        <b-jumbotron header="CookBook" :lead="$t('footer.sitedesc')">
+            <p id="copyright">{{ $t('footer.authorship') }}</p>
         </b-jumbotron>
     </div>
 </template>

@@ -66,7 +66,8 @@ const messages = {
             aboutUs: 'O nama',
         },
         footer: {
-
+            sitedesc: 'Kulinarski kutak',
+            authorship: 'Copyright 2021,  Viktor Katzenberger, Dragan Milovančević,  Odsek za softversko inženjerstvo Elektrotehničkog fakulteta univerziteta u Beogradu',
         },
         homepage: {
             title: 'Dobrodošli na CookBook!',
