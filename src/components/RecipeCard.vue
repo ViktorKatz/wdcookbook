@@ -35,7 +35,13 @@
                                  @ok="remove()"
                                  :ok-title="$t('addRecipe.ok')"
                                  :cancel-title="$t('addRecipe.cancel')"
-                                 :title="$t('addRecipe.confirm')">
+                                 :title="$t('addRecipe.confirm')"
+                                 header-close-variant="dark"
+                                 header-text-variant="dark"
+                                 header-bg-variant="warning"
+                                 header-border-variant="danger"
+                                 content-class="light-warning"
+                                 ok-variant="danger">
                             {{$t("addRecipe.confirmQ")}} "{{title}}" ?
                         </b-modal>
                     </div>
