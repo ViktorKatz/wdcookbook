@@ -44,7 +44,11 @@ const messages = {
             duration: "Dužina pripreme u minutima",
             difficulty: "Težina pripreme",
             instructions: "Uputsvo za pripremu",
-            add: "Dodaj"
+            add: "Dodaj",
+            confirm: "Da li ste sigurni",
+            confirmQ: "Da li ste sigurni da želite da obrišete recept",
+            ok: "Da",
+            cancel: "Ne"
         },
         categories: {
             appetizers: 'Predjela',
@@ -76,7 +80,7 @@ const messages = {
             about: 'O nama',
             myAccount: 'Moj nalog',
             addRecipe: 'Dodaj recept',
-        }
+        },
     },
     'en': {
         header: {
