@@ -68,16 +68,25 @@ const messages = {
             aboutUs: 'O nama',
         },
         footer: {
-
+            sitedesc: 'Kulinarski kutak',
+            authorship: 'Copyright 2021,  Viktor Katzenberger, Dragan Milovančević,  Odsek za softversko inženjerstvo Elektrotehničkog fakulteta univerziteta u Beogradu',
         },
         homepage: {
-            welcomeMsg: 'TEST PODATAK SRB: Dobrodošli na cookbook!',
+            title: 'Dobrodošli na CookBook!',
+            subtitle: 'Gde svi vaši kulinarski snovi postaju javascript',
+            bestRatedRecipes: 'Najbolje ocenjeni recepti',
         },
         recipe: {
             rating: 'Ocena',
             difficulty: 'Težina pripreme',
             by: 'od',
             instructions: 'Upustvo za pripremu'
+        },
+        blog: {
+            haveAlook: 'Pogledajte najnovije novosti iz sveta kulinarstva',
+            author: 'Autor',
+            date: 'Datum',
+            moreinfo: 'Više informacija...',
         },
         breadcrumbs: {
             home: 'Početna stranica',
@@ -92,7 +101,7 @@ const messages = {
             search: 'Search',
         },
         homepage: {
-            welcomeMsg: 'TEST DATA ENG: Welcome to the cookbook!',
+            title: 'Welcome to CookBook!',
         }
     },
 };
