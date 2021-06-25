@@ -88,7 +88,7 @@ const messages = {
             search: 'Search',
         },
         homepage: {
-            welcomeMsg: 'TEST DATA ENG: Welcome to the cookbook!',
+            title: 'Dobrodošli na CookBook!',
         }
     },
 };
