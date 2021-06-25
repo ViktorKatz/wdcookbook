@@ -60,7 +60,7 @@
         },
         created() {
             this.recipes = JSON.parse(localStorage.getItem('recipes'));
-            this.recipes = this.recipes.sort((a, b) => this.average(a.ratings) - this.average(b.ratings)).slice(0, 3);
+            this.recipes = this.recipes.sort((a, b) => this.average(b.ratings) - this.average(a.ratings)).slice(0, 3);
             console.log(this.recipes);
         }
     }
