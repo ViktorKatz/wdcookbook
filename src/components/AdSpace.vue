@@ -52,3 +52,10 @@
     }
 
 </style>
+
+<style>
+    .carousel-inner, .carousel-item, .carousel-item .img-fluid {
+        height: 100% !important;
+        
+    }
+</style>
