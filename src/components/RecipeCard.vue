@@ -1,11 +1,13 @@
 <template>
-    <b-card>
+    <b-card class="mt-3"
+            body-class="light-warning"
+            border-variant="warning">
         <router-link :to="'/recipe/'+this.id">
             <b-card-header header-bg-variant="warning"
-                header-border-variant="warning"
-                border-variant="warning">
+                       header-border-variant="warning"
+                       border-variant="warning">
                 <div class="title">
-                            <h3>{{title}}</h3>
+                    <h3>{{title}}</h3>
                     <router-link :to="'/categories/'+category">
                         {{$t(categories[parseInt(category) - 1].i18n_name)}}
                     </router-link>
@@ -28,14 +30,20 @@
                         </b-progress-bar>
                     </b-progress>
                     <div style="text-align: right;">
-                    <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
-                    <b-modal :id="'confirm-'+id"
-                                @ok="remove()"
-                                :ok-title="$t('addRecipe.ok')"
-                                :cancel-title="$t('addRecipe.cancel')"
-                                :title="$t('addRecipe.confirm')">
-                        {{$t("addRecipe.confirmQ")}} "{{title}}" ?
-                    </b-modal>
+                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="/trash.png"></b-img-lazy></b-button>
+                        <b-modal :id="'confirm-'+id"
+                                 @ok="remove()"
+                                 :ok-title="$t('addRecipe.ok')"
+                                 :cancel-title="$t('addRecipe.cancel')"
+                                 :title="$t('addRecipe.confirm')"
+                                 header-close-variant="dark"
+                                 header-text-variant="dark"
+                                 header-bg-variant="warning"
+                                 header-border-variant="danger"
+                                 content-class="light-warning"
+                                 ok-variant="danger">
+                            {{$t("addRecipe.confirmQ")}} "{{title}}" ?
+                        </b-modal>
                     </div>
                 </b-col>
             </b-row>
