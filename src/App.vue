@@ -23,6 +23,7 @@
     import Footer from '@/components/Footer.vue';
     import AdSpace from '@/components/AdSpace.vue'
     import defaultRecipes from '@/data/defaultRecipes.js';
+    import defaultUsers from '@/data/defaultUsers.js';
 
     export default {
         name: 'App',
@@ -30,6 +31,9 @@
             Header, Footer, AdSpace
         },
         created() {
+            if (localStorage.getItem("allUsers") == null)
+                localStorage.setItem("allUsers", JSON.stringify(defaultUsers));
+
             if (localStorage.getItem("recipes") == null)
                 localStorage.setItem("recipes", JSON.stringify(defaultRecipes));
         }
