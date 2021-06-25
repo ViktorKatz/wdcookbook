@@ -13,7 +13,7 @@
             </b-row>
             <b-row id="BlogPosts">
                 <b-col>
-                    <div> BlogPosts.. </div>
+                    <BlogPosts />
                 </b-col>
             </b-row>
         </b-container>
@@ -21,11 +21,12 @@
 </template>
 
 <script>
+    import BlogPosts from '@/components/BlogPosts.vue';
 
     export default {
         name: 'Home',
         components: {
-
+            BlogPosts
         }
     }
 </script>

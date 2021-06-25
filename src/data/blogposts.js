@@ -10,7 +10,7 @@
     },
     {
         id: 2,
-        author: 'Kuvar Steva',
+        author: 'Kuvarica Mica',
         title: '20 genijalnih trikova poznatih kuvara',
         text: 'Ako želite da dodate lagane note belog luka u jelo, ali se plašite da ne preterate sa mirisom, pre nego što stavite hranu, tiganj istrljajte čenom belog luka. Iskusni kuvari su pronašli dostojnu primenu za pivo: ovo piće sa soja sosom biće odlična marinada za meso, a mala količina tamnog piva koja se doda prilikom grilovanja povrća učiniće ga još ukusnijim. Ako preterate sa količinom soli dok kuvate supu, ne očajavajte.Stavite malu količinu neke žitarice u gazu i umočite je u supu.Dok se kuva, žitarice će apsorbovati suvišnu so. Kako svinjsko meso ne bi bilo tvrdo, posolite ga tek na kraju pečenja. Da bi se beli pirinač brže skuvao, dodajte nekoliko kapi sirćeta u vodu. Da se žumance ne bi raspalo dok sečete kuvano jaje, umočite nož u hladnu vodu pre toga.',
         img: 'https://stil.kurir.rs/data/images/2018/04/28/13/153579_profimedia0187807267_ls.jpg',

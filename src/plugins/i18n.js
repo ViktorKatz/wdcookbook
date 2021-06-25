@@ -75,6 +75,11 @@ const messages = {
             rating: 'Ocena',
             difficulty: 'Težina pripreme'
         },
+        blog: {
+            author: 'Autor',
+            date: 'Datum',
+            moreinfo: 'Više informacija...',
+        },
         breadcrumbs: {
             home: 'Početna stranica',
             about: 'O nama',
