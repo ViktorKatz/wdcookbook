@@ -14,10 +14,31 @@
             <hr />
             <b-row>
                 <b-col>
-                    <h2>{{ $t('account.yourRecipes') }}:</h2>
-                    <AllRecipesForId v-bind:userId="loggedUserId" />
+                    <b-button v-b-toggle="'recipes'" variant="warning">{{$t('account.yourRecipes')}}</b-button>
+                    <b-collapse id="recipes">
+                        <AllRecipesForId v-bind:userId="loggedUserId" />
+                    </b-collapse>
                 </b-col>
             </b-row>
+            <hr />
+            <b-row>
+                <b-col>
+                    <b-button v-b-toggle="'comments'" variant="warning">{{$t('account.yourComments')}}</b-button>
+                    <b-collapse id="comments">
+                        <AllCommentsForId v-bind:userId="loggedUserId" />
+                    </b-collapse>
+                </b-col>
+            </b-row>
+            <hr />
+            <b-row>
+                <b-col>
+                    <b-button v-b-toggle="'ratings'" variant="warning">{{$t('account.yourRatings')}}</b-button>
+                    <b-collapse id="ratings">
+                        <AllRatingsForId v-bind:userId="loggedUserId" />
+                    </b-collapse>
+                </b-col>
+            </b-row>
+            <hr />
         </b-container>
         <b-container fluid v-else>
             <b-row id="pagedesc">
@@ -106,11 +127,15 @@
 </style>
 
 <script>
+    import AllCommentsForId from '@/components/AllCommentsForId';
     import AllRecipesForId from '@/components/AllRecipesForId';
+    import AllRatingsForId from '@/components/AllRatingsForId';
 
     export default {
         components: {
-            AllRecipesForId
+            AllRecipesForId,
+            AllCommentsForId,
+            AllRatingsForId
         },
         data: function () {
             return {

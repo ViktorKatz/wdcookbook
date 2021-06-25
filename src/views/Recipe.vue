@@ -1,0 +1,40 @@
+<template>
+    <div>
+      <b-container fluid>
+        <h1>{{recipe.title}}</h1>
+        {{$t('recipe.by')}} {{username}}
+        <hr />
+        <b-row>
+          <b-col cols="12" lg="6">
+            <h3> {{$t('recipe.instructions')}} </h3>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
+</template>
+
+<style scoped>
+</style>
+
+<script>
+import categories from '@/data/categories.js'
+
+export default {
+  name: 'Recipe',
+  components: {
+  },
+  data() {
+    return {
+      id: this.$route.params.id,
+      categories: categories,
+      loggedUserId: parseInt(localStorage.getItem("loggedUserId")),
+      recipe: null,
+      username: null
+    }
+  },
+  created() {
+    this.recipe = JSON.parse(localStorage.getItem('recipes')).find(e => e.id == this.id);
+    this.username = JSON.parse(localStorage.getItem('allUsers'))[this.recipe.userId - 1].username;
+  }
+}
+</script>

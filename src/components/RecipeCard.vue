@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <router-link :to="'/recipe/'+this.id">
         <b-card>
             <b-card-header header-bg-variant="warning"
                 header-border-variant="warning"
@@ -8,9 +8,9 @@
                     <div>
                         <h3>{{title}}</h3>
                     </div>
-                    <div>
+                    <router-link :to="'/categories/'+category">
                         {{$t(categories[parseInt(category) - 1].i18n_name)}}
-                    </div>
+                    </router-link>
                 </div>
             </b-card-header>
             <b-card-body>
@@ -42,10 +42,14 @@
                 </b-row>
             </b-card-body>
         </b-card>
-    </div>
+    </router-link>
 </template>
 
 <style scoped>
+a {
+    text-decoration: none;
+    color: #2c3e50;
+}
 .thumb {
     width:100%;
 }
@@ -72,7 +76,7 @@
 import categories from '@/data/categories.js'
 
     export default {
-        name: 'AllRecipesForId',
+        name: 'RecipeCard',
         props: {
             title: String,
             rating: Number,

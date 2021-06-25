@@ -28,6 +28,8 @@ const messages = {
             passworddesc: 'Šifra mora imati makar 8 karaktera',
             greeting: 'Zdravo',
             yourRecipes: 'Vaši recepti',
+            yourComments: 'Vaši komentari',
+            yourRatings: 'Vaše ocene',
             logout: 'Izloguj se',
             logoutQuestion: 'Da li želite da se izlogujete?',
             error: {
@@ -73,7 +75,9 @@ const messages = {
         },
         recipe: {
             rating: 'Ocena',
-            difficulty: 'Težina pripreme'
+            difficulty: 'Težina pripreme',
+            by: 'od',
+            instructions: 'Upustvo za pripremu'
         },
         breadcrumbs: {
             home: 'Početna stranica',
