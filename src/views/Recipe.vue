@@ -5,8 +5,8 @@
         {{$t('recipe.by')}} {{username}}
         <hr />
         <b-row>
-          <b-col cols="12" lg="6">
             <h3> {{$t('recipe.instructions')}} </h3>
+          <b-col cols="12" lg="6">
             {{recipe.desc}}
           </b-col>
           <b-col cols="12" lg="6">
@@ -25,8 +25,10 @@
 </template>
 
 <style scoped>
+h3 {
+  padding-bottom: 20px;
+}
 </style>
-
 <script>
 import categories from '@/data/categories.js'
 
