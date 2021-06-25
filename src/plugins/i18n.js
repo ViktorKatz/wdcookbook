@@ -57,6 +57,14 @@ const messages = {
             mainCourses: 'Glavna jela',
             desserts: 'Deserti',
             snacks: 'Užine',
+            sort: "Sortirajte po",
+            order: {
+                id: "Redosledu dodavanja",
+                difficulty: "Težini pripreme",
+                rating: "Prosečnoj oceni",
+                asc: "rastuće",
+                desc: "opadajuće"
+            }
         },
         header: {
             lang: 'Jezik',
@@ -80,7 +88,14 @@ const messages = {
             rating: 'Ocena',
             difficulty: 'Težina pripreme',
             by: 'od',
-            instructions: 'Upustvo za pripremu'
+            instructions: 'Upustvo za pripremu',
+            comments: 'Komentari',
+            pictures: 'Slike',
+            next: 'Sledeća',
+            prev: 'Prethodna',
+            noVideo: 'Video nije dostupan',
+            addComment: 'Komentariši',
+            duration: 'Vreme pripreme'
         },
         blog: {
             haveAlook: 'Pogledajte najnovije novosti iz sveta kulinarstva',

@@ -2,18 +2,18 @@
     <b-card class="mt-3"
             body-class="light-warning"
             border-variant="warning">
-        <b-card-header header-bg-variant="warning"
+        <router-link :to="'/recipe/'+this.id">
+            <b-card-header header-bg-variant="warning"
                        header-border-variant="warning"
                        border-variant="warning">
-            <div class="title">
-                <router-link :to="'/recipe/'+this.id">
+                <div class="title">
                     <h3>{{title}}</h3>
-                </router-link>
-                <router-link :to="'/categories/'+category">
-                    {{$t(categories[parseInt(category) - 1].i18n_name)}}
-                </router-link>
-            </div>
-        </b-card-header>
+                    <router-link :to="'/categories/'+category">
+                        {{$t(categories[parseInt(category) - 1].i18n_name)}}
+                    </router-link>
+                </div>
+            </b-card-header>
+        </router-link>
         <b-card-body>
             <b-row>
                 <b-col cols="12" lg="4">
@@ -30,7 +30,7 @@
                         </b-progress-bar>
                     </b-progress>
                     <div style="text-align: right;">
-                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
+                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="/trash.png"></b-img-lazy></b-button>
                         <b-modal :id="'confirm-'+id"
                                  @ok="remove()"
                                  :ok-title="$t('addRecipe.ok')"
