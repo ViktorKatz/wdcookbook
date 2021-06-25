@@ -1,17 +1,17 @@
 <template>
     <b-card>
-        <b-card-header header-bg-variant="warning"
-            header-border-variant="warning"
-            border-variant="warning">
-            <div class="title">
-                    <router-link :to="'/recipe/'+this.id">
-                        <h3>{{title}}</h3>
+        <router-link :to="'/recipe/'+this.id">
+            <b-card-header header-bg-variant="warning"
+                header-border-variant="warning"
+                border-variant="warning">
+                <div class="title">
+                            <h3>{{title}}</h3>
+                    <router-link :to="'/categories/'+category">
+                        {{$t(categories[parseInt(category) - 1].i18n_name)}}
                     </router-link>
-                <router-link :to="'/categories/'+category">
-                    {{$t(categories[parseInt(category) - 1].i18n_name)}}
-                </router-link>
-            </div>
-        </b-card-header>
+                </div>
+            </b-card-header>
+        </router-link>
         <b-card-body>
             <b-row>
                 <b-col cols="12" lg="4">

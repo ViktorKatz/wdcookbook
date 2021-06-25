@@ -158,7 +158,7 @@ import categories from '@/data/categories.js'
                                 desc: this.instructions,
                                 preptime: parseInt(this.duration),
                                 difficulty: parseInt(this.difficulty),
-                                videos: [],
+                                video: "",
                                 ratings: [],
                                 pictures: [],
                                 comments: []

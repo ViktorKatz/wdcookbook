@@ -35,7 +35,7 @@ const defaultRecipes = [
                     { userId: 5, rating: 5 },
                     { userId: 6, rating: 4 },
                     { userId: 7, rating: 5 }],
-        videos: ['https://www.youtube.com/embed/ewXhHgESReQ', 'https://www.youtube.com/embed/SGswt_asbzE'],
+        video: 'https://www.youtube.com/embed/ewXhHgESReQ',
         pictures: ['https://podravkaiovariations.azureedge.net/4bb6d842-631f-11eb-8162-0242ac12001a/v/f2b1f6a6-64bc-11eb-b6c2-0242ac130010/1600x1200-f2b21938-64bc-11eb-9498-0242ac130010.webp', 'https://d1uz88p17r663j.cloudfront.net/resized/6b1bb1bc21da019356b0ffde7f979c2a_Doma%C4%87a_Sarma_iStock-535515436_1500_700.jpg'],
         comments: [
             { userId: 1, comment: 'Ja volim sarme' },
