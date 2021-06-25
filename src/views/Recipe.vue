@@ -45,7 +45,7 @@
                     indicators
                     :label-next="$t('recipe.next')"
                     :label-prev="$t('recipe.prev')"
-                    img-height="480">
+                    class="gallery">
           <b-carousel-slide v-for="pic in recipe.pictures" :key="pic" :img-src="pic">
           </b-carousel-slide>
         </b-carousel>
@@ -75,6 +75,10 @@ h3 {
 }
 .mb {
   margin: 10px;
+}
+.gallery {
+  width: 100%;
+  height: 480px;
 }
 </style>
 <script>
