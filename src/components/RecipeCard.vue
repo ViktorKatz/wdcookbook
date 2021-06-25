@@ -1,48 +1,46 @@
 <template>
-    <router-link :to="'/recipe/'+this.id">
-        <b-card>
-            <b-card-header header-bg-variant="warning"
-                header-border-variant="warning"
-                border-variant="warning">
-                <div class="title">
-                    <div>
+    <b-card>
+        <b-card-header header-bg-variant="warning"
+            header-border-variant="warning"
+            border-variant="warning">
+            <div class="title">
+                    <router-link :to="'/recipe/'+this.id">
                         <h3>{{title}}</h3>
-                    </div>
-                    <router-link :to="'/categories/'+category">
-                        {{$t(categories[parseInt(category) - 1].i18n_name)}}
                     </router-link>
-                </div>
-            </b-card-header>
-            <b-card-body>
-                <b-row>
-                    <b-col cols="12" lg="4">
-                        <b-card-img-lazy :src="picture" class="thumb" />
-                    </b-col>
-                    <b-col cols="12" lg="4">
-                        <h3 class="pad">{{$t('recipe.rating')}}</h3>
-                        <b-rating class="pad" variant="warning" readonly :value="rating" />
-                    </b-col>
-                    <b-col cols="12" lg="4">
-                        <h3 class="pad">{{$t('recipe.difficulty')}}</h3>
-                        <b-progress class="progress pad">
-                            <b-progress-bar variant="danger" role="progressbar" :value="difficulty" min="0" max="5">
-                            </b-progress-bar>
-                        </b-progress>
-                        <div style="text-align: right;">
-                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
-                        <b-modal :id="'confirm-'+id"
-                                    @ok="remove()"
-                                    :ok-title="$t('addRecipe.ok')"
-                                    :cancel-title="$t('addRecipe.cancel')"
-                                    :title="$t('addRecipe.confirm')">
-                            {{$t("addRecipe.confirmQ")}} "{{title}}" ?
-                        </b-modal>
-                        </div>
-                    </b-col>
-                </b-row>
-            </b-card-body>
-        </b-card>
-    </router-link>
+                <router-link :to="'/categories/'+category">
+                    {{$t(categories[parseInt(category) - 1].i18n_name)}}
+                </router-link>
+            </div>
+        </b-card-header>
+        <b-card-body>
+            <b-row>
+                <b-col cols="12" lg="4">
+                    <b-card-img-lazy :src="picture" class="thumb" />
+                </b-col>
+                <b-col cols="12" lg="4">
+                    <h3 class="pad">{{$t('recipe.rating')}}</h3>
+                    <b-rating class="pad" variant="warning" readonly :value="rating" />
+                </b-col>
+                <b-col cols="12" lg="4">
+                    <h3 class="pad">{{$t('recipe.difficulty')}}</h3>
+                    <b-progress class="progress pad">
+                        <b-progress-bar variant="danger" role="progressbar" :value="difficulty" min="0" max="5">
+                        </b-progress-bar>
+                    </b-progress>
+                    <div style="text-align: right;">
+                    <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
+                    <b-modal :id="'confirm-'+id"
+                                @ok="remove()"
+                                :ok-title="$t('addRecipe.ok')"
+                                :cancel-title="$t('addRecipe.cancel')"
+                                :title="$t('addRecipe.confirm')">
+                        {{$t("addRecipe.confirmQ")}} "{{title}}" ?
+                    </b-modal>
+                    </div>
+                </b-col>
+            </b-row>
+        </b-card-body>
+    </b-card>
 </template>
 
 <style scoped>
