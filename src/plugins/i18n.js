@@ -29,6 +29,7 @@ const messages = {
             greeting: 'Zdravo',
             yourRecipes: 'Vaši recepti',
             yourComments: 'Vaši komentari',
+            yourRatings: 'Vaše ocene',
             logout: 'Izloguj se',
             logoutQuestion: 'Da li želite da se izlogujete?',
             error: {
