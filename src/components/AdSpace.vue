@@ -1,45 +1,45 @@
 <template>
     <div id="AdSpace" class="mt-3 mb-3 mt-lg-1">
         <b-carousel id="blic-zena-banner"
-                    interval="21000"
+                    :interval="21000"
                     img-width="360"
                     img-height="240"
                     fade
                     no-touch
                     class="ad-carousel mt-2">
             <a href="https://www.blic.rs/">
-                <b-carousel-slide img-src="https://www.mercury-publicity.com/wp-content/uploads/2019/03/blic.jpg" />
+                <b-carousel-slide img-src="/blic.jpg" />
             </a>
             <a href="https://www.sns.org.rs/en">
-                <b-carousel-slide img-src="https://rs.n1info.com/wp-content/uploads/2020/02/slogan-302681.jpeg" />
+                <b-carousel-slide img-src="/vucic.jpeg" />
             </a>
         </b-carousel>
         <b-carousel id="vesti-banner"
-                    interval="17000"
+                    :interval="17000"
                     img-width="360"
                     img-height="240"
                     fade
                     no-touch
                     class="ad-carousel mt-2">
             <a href="https://www.krstarica.com/">
-                <b-carousel-slide img-src="https://play-lh.googleusercontent.com/1jKiXr9aFuKGzWOHif-gQwXymvzQ_u3EvchheI66EYoWnx0lk3HUXvDi8pKcy8nSZw" />
+                <b-carousel-slide img-src="/krstarica.png" />
             </a>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <b-carousel-slide img-src="https://neilpatel.com/wp-content/uploads/2021/02/ExamplesofSuccessfulBannerAdvertising.jpg" />
+                <b-carousel-slide img-src="/Examples.webp" />
             </a>
         </b-carousel>
         <b-carousel id="third-banner"
-                    interval="15000"
+                    :interval="15000"
                     img-width="360"
                     img-height="240"
                     fade
                     no-touch
                     class="ad-carousel mt-2">
             <a href="https://rs.n1info.com/">
-                <b-carousel-slide img-src="https://www.danas.rs/wp-content/uploads/2019/07/n1-678x382.jpg" />
+                <b-carousel-slide img-src="/n1.jpg" />
             </a>
             <a href="https://zena.blic.rs/">
-                <b-carousel-slide img-src="http://www.serbianlogo.com/thumbnails/blic_zena.gif" />
+                <b-carousel-slide img-src="/blic_zena.gif" />
             </a>
         </b-carousel>
     </div>
@@ -50,7 +50,6 @@
         width: 100%;
         height: 200px;
     }
-
 </style>
 
 <style>
@@ -58,3 +57,7 @@
         height: 100% !important;
     }
 </style>
+
+<script>
+
+</script>
