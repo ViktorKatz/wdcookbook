@@ -6,9 +6,9 @@
                     :difficulty="recipe.difficulty"
                     :rating="average(recipe.ratings)"
                     :category="recipe.category"
-                    :picture="(recipe.pictures.length > 0) ? recipe.pictures[0]:'/missing.jpg'">
+                    :picture="(recipe.pictures.length > 0) ? recipe.pictures[0]:'/missing.jpg'"
                     :id="recipe.id"
-                    :userId="userId"
+                    :userId="userId">
         >
         </RecipeCard>
     </div>
