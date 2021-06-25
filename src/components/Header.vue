@@ -9,7 +9,7 @@
                 <b-navbar-nav pills fill>
                     <b-nav-item to="/" exact exact-active-class="active">{{ $t('header.home') }}</b-nav-item>
                     <b-nav-item-dropdown to="recipe" exact exact-active-class="active" v-bind:text="$t('header.recipes')">
-                        <b-dropdown-item v-for="category in categories" v-bind:key="category.i18n_name" v-bind:to="category.router_link">{{ $t(category.i18n_name) }}</b-dropdown-item>
+                        <b-dropdown-item v-for="category in categories" v-bind:key="category.i18n_name" v-bind:to="'/category/' + category.id">{{ $t(category.i18n_name) }}</b-dropdown-item>
                     </b-nav-item-dropdown>
                     <b-nav-item to="/addRecipe" exact exact-active-class="active">{{ $t('header.addRecipe') }}</b-nav-item>
                     <b-nav-item to="/myAccount" exact exact-active-class="active">{{ $t('header.myAccount') }}</b-nav-item>

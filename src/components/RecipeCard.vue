@@ -6,7 +6,7 @@
                 border-variant="warning">
                 <div class="title">
                             <h3>{{title}}</h3>
-                    <router-link :to="'/categories/'+category">
+                    <router-link :to="'/category/'+category">
                         {{$t(categories[parseInt(category) - 1].i18n_name)}}
                     </router-link>
                 </div>
@@ -28,7 +28,7 @@
                         </b-progress-bar>
                     </b-progress>
                     <div style="text-align: right;">
-                    <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
+                    <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="/trash.png"></b-img-lazy></b-button>
                     <b-modal :id="'confirm-'+id"
                                 @ok="remove()"
                                 :ok-title="$t('addRecipe.ok')"
