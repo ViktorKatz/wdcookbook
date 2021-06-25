@@ -57,6 +57,14 @@ const messages = {
             mainCourses: 'Glavna jela',
             desserts: 'Deserti',
             snacks: 'Užine',
+            sort: "Sortirajte po",
+            order: {
+                id: "Redosledu dodavanja",
+                difficulty: "Težini pripreme",
+                rating: "Prosečnoj oceni",
+                asc: "rastuće",
+                desc: "opadajuće"
+            }
         },
         header: {
             lang: 'Jezik',
