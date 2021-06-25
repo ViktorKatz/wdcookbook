@@ -1,7 +1,7 @@
 <template>
     <div id="AdSpace" class="mt-3 mb-3 mt-lg-1">
         <b-carousel id="blic-zena-banner"
-                    interval="9000"
+                    interval="21000"
                     img-width="360"
                     img-height="240"
                     fade
@@ -15,7 +15,7 @@
             </a>
         </b-carousel>
         <b-carousel id="vesti-banner"
-                    interval="6000"
+                    interval="17000"
                     img-width="360"
                     img-height="240"
                     fade
@@ -29,7 +29,7 @@
             </a>
         </b-carousel>
         <b-carousel id="third-banner"
-                    interval="11000"
+                    interval="15000"
                     img-width="360"
                     img-height="240"
                     fade
@@ -56,6 +56,5 @@
 <style>
     .carousel-inner, .carousel-item, .carousel-item .img-fluid {
         height: 100% !important;
-        
     }
 </style>
