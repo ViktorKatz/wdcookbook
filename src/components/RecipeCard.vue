@@ -28,6 +28,9 @@
                             <b-progress-bar variant="danger" role="progressbar" :value="difficulty" min="0" max="5">
                             </b-progress-bar>
                         </b-progress>
+                        <div style="text-align: right;">
+                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" @click="remove()"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
+                        </div>
                     </b-col>
                 </b-row>
             </b-card-body>
@@ -50,6 +53,13 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.trash {
+    width:100%;
+}
+.trash-b {
+    width: 15%;
+    padding: 5px;
+}
 </style>
 <script>
 import categories from '@/data/categories.js'
@@ -61,13 +71,23 @@ import categories from '@/data/categories.js'
             rating: Number,
             picture: String,
             difficulty: Number,
-            category: String
+            category: String,
+            id: Number,
+            userId: Number
         },
         methods: {
+            remove() {
+                let allRecipes = JSON.parse(localStorage.getItem("recipes"));
+                allRecipes = allRecipes.filter(e => e.id != this.id);
+                localStorage.setItem("recipes", JSON.stringify(allRecipes));
+                this.$destroy();
+                this.$el.parentNode.removeChild(this.$el);
+            }
         },
         data() {
             return {
-                categories: categories
+                categories: categories,
+                loggedUserId: parseInt(localStorage.getItem("loggedUserId"))
             }
         }
     }
