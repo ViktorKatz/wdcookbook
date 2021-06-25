@@ -75,7 +75,9 @@ const messages = {
         },
         recipe: {
             rating: 'Ocena',
-            difficulty: 'Težina pripreme'
+            difficulty: 'Težina pripreme',
+            by: 'od',
+            instructions: 'Upustvo za pripremu'
         },
         breadcrumbs: {
             home: 'Početna stranica',

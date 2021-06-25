@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <router-link :to="'/recipe/' + id">
         <b-card>
             <b-card-header header-bg-variant="warning"
                 header-border-variant="warning"
@@ -16,30 +16,13 @@
                 </b-row>
             </b-card-body>
         </b-card>
-    </div>
+    </router-link>
 </template>
 
 <style scoped>
-.thumb {
-    width:100%;
-}
-.pad {
-    margin-bottom: 40px;
-}
-.progress {
-    height: 30px;
-}
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.trash {
-    width:100%;
-}
-.trash-b {
-    width: 15%;
-    padding: 5px;
+a {
+    text-decoration: none;
+    color: #2c3e50;
 }
 </style>
 <script>
@@ -50,7 +33,8 @@ import categories from '@/data/categories.js'
         props: {
             title: String,
             rating: Number,
-            user: String
+            user: String,
+            id: Number
         },
         methods: {
             remove() {

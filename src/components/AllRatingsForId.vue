@@ -4,7 +4,8 @@
                     :key="rating.title"
                     :title="rating.title"
                     :user="rating.user"
-                    :rating="rating.rating">
+                    :rating="rating.rating"
+                    :id="rating.id">
         </RatingCard>
     </div>
 </template>
@@ -38,11 +39,11 @@ import RatingCard from './RatingCard.vue'
                         this.myRatings.push({
                             rating: c.rating,
                             title: e.title,
-                            user: allUsers[this.userId - 1].username
+                            user: allUsers[this.userId - 1].username,
+                            id: e.id
                         });
                 });
             });
-        console.log(this.myRatings);
         }
     }
 

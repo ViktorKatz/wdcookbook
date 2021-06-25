@@ -45,6 +45,11 @@ const routes = [
         meta: {
             breadcrumb: "breadcrumbs.addRecipe"
         },
+    },
+    {
+        path: '/recipe/:id',
+        name: 'Recipe',
+        component: () => import(/* webpackChunkName: "Recipe" */ '../views/Recipe.vue'),
     }
 
 ]

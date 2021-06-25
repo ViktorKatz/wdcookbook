@@ -4,7 +4,8 @@
                     :key="comment.title"
                     :title="comment.title"
                     :comment="comment.comment"
-                    :user="comment.user">
+                    :user="comment.user"
+                    :id="comment.id">
         </CommentCard>
     </div>
 </template>
@@ -38,7 +39,8 @@ import CommentCard from './CommentCard.vue'
                         this.myComments.push({
                             comment: c.comment,
                             title: e.title,
-                            user: allUsers[this.userId - 1].username
+                            user: allUsers[this.userId - 1].username,
+                            id: e.id
                         });
                 });
             });
