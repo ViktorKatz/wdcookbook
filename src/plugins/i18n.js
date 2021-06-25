@@ -78,7 +78,12 @@ const messages = {
             difficulty: 'Težina pripreme',
             by: 'od',
             instructions: 'Upustvo za pripremu',
-            comments: 'Komentari'
+            comments: 'Komentari',
+            pictures: 'Slike',
+            next: 'Sledeća',
+            prev: 'Prethodna',
+            noVideo: 'Video nije dostupan',
+            addComment: 'Komentariši'
         },
         breadcrumbs: {
             home: 'Početna stranica',

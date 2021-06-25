@@ -57,7 +57,7 @@ const defaultRecipes = [
                     { userId: 5, rating: 1 },
                     { userId: 6, rating: 3 },
                     { userId: 7, rating: 4 }],
-        videos: [],
+        video: "",
         pictures: ["https://bonapeti.rs/files/lib/600x350/kaneloni-mlqko-sos.JPG"],
         comments: [
             { userId: 2, comment: 'Manje začina valja...' },
@@ -78,7 +78,7 @@ const defaultRecipes = [
                     { userId: 4, rating: 5},
                     { userId: 5, rating: 3},
                     { userId: 6, rating: 2}],
-        videos: [],
+        video: "",
         pictures: ["http://www.centarzdravlja.hr/site/assets/files/24757/riba61.jpg"],
         comments: [
             { userId: 3, comment: 'Nisam ljubitelj ovoga.' },

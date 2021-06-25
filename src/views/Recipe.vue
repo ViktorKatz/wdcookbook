@@ -26,15 +26,29 @@
             {{recipe.desc}}
           </b-col>
           <b-col cols="12" lg="6">
-            <iframe width="100%" height="315"
+            <iframe v-if="recipe.video != ''" width="100%" height="315"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               :src="recipe.video">
             </iframe>
+            <div v-else>
+              {{$t('recipe.noVideo')}}
+            </div> 
           </b-col>
         </b-row>
+        <hr />
+        <h3>{{$t('recipe.pictures')}}</h3>
+        <b-carousel :interval="4000"
+                    controls
+                    indicators
+                    :label-next="$t('recipe.next')"
+                    :label-prev="$t('recipe.prev')"
+                    img-height="480">
+          <b-carousel-slide v-for="pic in recipe.pictures" :key="pic" :img-src="pic">
+          </b-carousel-slide>
+        </b-carousel>
         <hr />
         <h3>{{$t('recipe.comments')}}</h3>
         <CommentCard v-for="comment in this.recipe.comments"
@@ -42,6 +56,9 @@
                       :user="users[comment.userId - 1].username"
                       :comment="comment.comment">
         </CommentCard>
+        <b-textarea class="new-comment" v-model="newcomment">
+        </b-textarea>
+        <b-button class="mb" variant="warning" @click="addComment()">{{$t('recipe.addComment')}}</b-button>
       </b-container>
     </div>
 </template>
@@ -49,6 +66,15 @@
 <style scoped>
 h3 {
   padding-bottom: 20px;
+}
+.pad {
+  height: 28px;
+}
+.new-comment {
+  margin-top: 20px;
+}
+.mb {
+  margin: 10px;
 }
 </style>
 <script>
@@ -58,7 +84,7 @@ import CommentCard from '../components/CommentCard.vue'
 export default {
   name: 'Recipe',
   components: {
-    CommentCard
+    CommentCard,
   },
   data() {
     return {
@@ -70,7 +96,8 @@ export default {
       rating: null,
       recipes: [],
       rateHover : false,
-      users: JSON.parse(localStorage.getItem('allUsers'))
+      users: JSON.parse(localStorage.getItem('allUsers')),
+      newcomment: ""
     }
   },
   created() {
@@ -104,6 +131,11 @@ export default {
         this.recipe.ratings.push({ userId: this.loggedUserId, rating: val });
       else ret.rating = val;
       localStorage.setItem('recipes', JSON.stringify(this.recipes));
+    },
+    addComment() {
+      this.recipe.comments.push({userId: this.loggedUserId, comment: this.newcomment});
+      localStorage.setItem('recipes', JSON.stringify(this.recipes));
+      this.newcomment = "";
     }
   }
 }
