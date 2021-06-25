@@ -69,13 +69,16 @@ const messages = {
 
         },
         homepage: {
-            welcomeMsg: 'TEST PODATAK SRB: Dobrodošli na cookbook!',
+            title: 'Dobrodošli na CookBook!',
+            subtitle: 'Gde svi vaši kulinarski snovi postaju javascript',
+            bestRatedRecipes: 'Najbolje ocenjeni recepti',
         },
         recipe: {
             rating: 'Ocena',
             difficulty: 'Težina pripreme'
         },
         blog: {
+            haveAlook: 'Pogledajte najnovije novosti iz sveta kulinarstva',
             author: 'Autor',
             date: 'Datum',
             moreinfo: 'Više informacija...',
@@ -93,7 +96,7 @@ const messages = {
             search: 'Search',
         },
         homepage: {
-            title: 'Dobrodošli na CookBook!',
+            title: 'Welcome to CookBook!',
         }
     },
 };
