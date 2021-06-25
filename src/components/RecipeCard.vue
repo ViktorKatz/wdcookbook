@@ -30,7 +30,7 @@
                         </b-progress-bar>
                     </b-progress>
                     <div style="text-align: right;">
-                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
+                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="/trash.png"></b-img-lazy></b-button>
                         <b-modal :id="'confirm-'+id"
                                  @ok="remove()"
                                  :ok-title="$t('addRecipe.ok')"
