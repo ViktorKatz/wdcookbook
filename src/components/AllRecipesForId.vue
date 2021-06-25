@@ -36,7 +36,7 @@ import RecipeCard from './RecipeCard.vue'
                     return 0;
                 var total = 0;
                 for(var i = 0; i < array.length; i++) {
-                    total += array[i];
+                    total += array[i].rating;
                 }
                 return total / array.length;
             }
