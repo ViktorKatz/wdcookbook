@@ -1,9 +1,11 @@
 <template>
     <router-link :to="'/recipe/' + id">
-        <b-card>
-            <b-card-header header-bg-variant="warning"
-                header-border-variant="warning"
+        <b-card class="mt-3"
+                body-class="light-warning"
                 border-variant="warning">
+            <b-card-header header-bg-variant="warning"
+                           header-border-variant="warning"
+                           border-variant="warning">
                 <div class="title">
                     <div>
                         <h3>{{title || user}}</h3>
@@ -20,13 +22,13 @@
 </template>
 
 <style scoped>
-a {
-    text-decoration: none;
-    color: #2c3e50;
-}
+    a {
+        text-decoration: none;
+        color: #2c3e50;
+    }
 </style>
 <script>
-import categories from '@/data/categories.js'
+    import categories from '@/data/categories.js'
 
     export default {
         name: 'CommentCard',

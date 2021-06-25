@@ -1,12 +1,14 @@
 <template>
-    <b-card>
+    <b-card class="mt-3"
+            body-class="light-warning"
+            border-variant="warning">
         <router-link :to="'/recipe/'+this.id">
             <b-card-header header-bg-variant="warning"
-                header-border-variant="warning"
-                border-variant="warning">
+                       header-border-variant="warning"
+                       border-variant="warning">
                 <div class="title">
-                            <h3>{{title}}</h3>
-                    <router-link :to="'/category/'+category">
+                    <h3>{{title}}</h3>
+                    <router-link :to="'/categories/'+category">
                         {{$t(categories[parseInt(category) - 1].i18n_name)}}
                     </router-link>
                 </div>
@@ -28,14 +30,20 @@
                         </b-progress-bar>
                     </b-progress>
                     <div style="text-align: right;">
-                    <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="/trash.png"></b-img-lazy></b-button>
-                    <b-modal :id="'confirm-'+id"
-                                @ok="remove()"
-                                :ok-title="$t('addRecipe.ok')"
-                                :cancel-title="$t('addRecipe.cancel')"
-                                :title="$t('addRecipe.confirm')">
-                        {{$t("addRecipe.confirmQ")}} "{{title}}" ?
-                    </b-modal>
+                        <b-button class="trash-b" v-if="id != null && userId == loggedUserId" v-b-modal="'confirm-'+id"><b-img-lazy class="trash" src="trash.png"></b-img-lazy></b-button>
+                        <b-modal :id="'confirm-'+id"
+                                 @ok="remove()"
+                                 :ok-title="$t('addRecipe.ok')"
+                                 :cancel-title="$t('addRecipe.cancel')"
+                                 :title="$t('addRecipe.confirm')"
+                                 header-close-variant="dark"
+                                 header-text-variant="dark"
+                                 header-bg-variant="warning"
+                                 header-border-variant="danger"
+                                 content-class="light-warning"
+                                 ok-variant="danger">
+                            {{$t("addRecipe.confirmQ")}} "{{title}}" ?
+                        </b-modal>
                     </div>
                 </b-col>
             </b-row>
@@ -44,34 +52,40 @@
 </template>
 
 <style scoped>
-a {
-    text-decoration: none;
-    color: #2c3e50;
-}
-.thumb {
-    width:100%;
-}
-.pad {
-    margin-bottom: 40px;
-}
-.progress {
-    height: 30px;
-}
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.trash {
-    width:100%;
-}
-.trash-b {
-    width: 15%;
-    padding: 5px;
-}
+    a {
+        text-decoration: none;
+        color: #2c3e50;
+    }
+
+    .thumb {
+        width: 100%;
+    }
+
+    .pad {
+        margin-bottom: 40px;
+    }
+
+    .progress {
+        height: 30px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .trash {
+        width: 100%;
+    }
+
+    .trash-b {
+        width: 15%;
+        padding: 5px;
+    }
 </style>
 <script>
-import categories from '@/data/categories.js'
+    import categories from '@/data/categories.js'
 
     export default {
         name: 'RecipeCard',
