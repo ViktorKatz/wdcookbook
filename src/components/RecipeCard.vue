@@ -72,7 +72,7 @@
 import categories from '@/data/categories.js'
 
     export default {
-        name: 'AllRecipesForId',
+        name: 'RecipeCard',
         props: {
             title: String,
             rating: Number,

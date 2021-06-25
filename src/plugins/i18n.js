@@ -28,6 +28,7 @@ const messages = {
             passworddesc: 'Šifra mora imati makar 8 karaktera',
             greeting: 'Zdravo',
             yourRecipes: 'Vaši recepti',
+            yourComments: 'Vaši komentari',
             logout: 'Izloguj se',
             logoutQuestion: 'Da li želite da se izlogujete?',
             error: {
