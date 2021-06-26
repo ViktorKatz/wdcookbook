@@ -26,7 +26,7 @@
                 <b-col cols="12" lg="4">
                     <h3 class="pad">{{$t('recipe.difficulty')}}</h3>
                     <b-progress class="progress pad">
-                        <b-progress-bar variant="danger" role="progressbar" :value="difficulty" min="0" max="5">
+                        <b-progress-bar :variant="getVariant()" role="progressbar" :value="difficulty" min="0" max="5">
                         </b-progress-bar>
                     </b-progress>
                     <div style="text-align: right;">
@@ -99,6 +99,13 @@ import categories from '@/data/categories.js'
                 localStorage.setItem("recipes", JSON.stringify(allRecipes));
                 this.$destroy();
                 this.$el.parentNode.removeChild(this.$el);
+            },
+            getVariant() {
+                if (this.difficulty < 3)
+                    return "success";
+                if (this.difficulty < 5)
+                    return "warning";
+                return "danger";
             }
         },
         data() {
