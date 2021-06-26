@@ -109,6 +109,12 @@ const messages = {
             myAccount: 'Moj nalog',
             addRecipe: 'Dodaj recept',
         },
+        title: {
+            home: "Početna",
+            myAccount: "Moj profil",
+            about: "O nama",
+            addRecipe: "Novi recept"
+        }
     },
     'en': {
         header: {

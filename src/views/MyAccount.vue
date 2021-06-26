@@ -152,6 +152,7 @@
         created() {
             this.loggedUserId = parseInt(localStorage.getItem('loggedUserId'));
             this.loggedUserUsername = localStorage.getItem('loggedUserUsername');
+            this.$title = this.loggedUserUsername;
         },
         methods: {
             loginSubmit(event) {

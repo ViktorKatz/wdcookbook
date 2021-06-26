@@ -61,13 +61,13 @@
         },
         data() {
             return {
-                recipes: []
+                recipes: [{names: 'asd'}]
             }
         },
         created() {
             this.recipes = JSON.parse(localStorage.getItem('recipes'));
             this.recipes = this.recipes.sort((a, b) => this.average(b.ratings) - this.average(a.ratings)).slice(0, 3);
-            console.log(this.recipes);
+            this.$title = this.$t('title.home');
         }
     }
 </script>

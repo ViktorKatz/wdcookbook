@@ -137,6 +137,7 @@ import categories from '@/data/categories.js'
             };
         },
         created() {
+            this.$title = this.$t('title.addRecipe');
             this.loggedUserId = localStorage.getItem('loggedUserId');
             this.loggedUserUsername = localStorage.getItem('loggedUserUsername');
         },

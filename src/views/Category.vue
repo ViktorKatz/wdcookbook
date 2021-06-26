@@ -67,6 +67,7 @@ export default {
     }
   },
   created() {
+    this.$title = this.$t(categories[this.id - 1].i18n_name);
     this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id);
   },
   methods: {
