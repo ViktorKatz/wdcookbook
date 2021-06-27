@@ -20,7 +20,7 @@
                     <b-col cols="6" lg="4">
                         <h3 class="title">{{$t('recipe.difficulty')}}</h3>
                         <b-progress class="progress pad">
-                            <b-progress-bar variant="danger" role="progressbar" :value="recipe.difficulty" min="0" max="5">
+                            <b-progress-bar :variant="getVariant()" role="progressbar" :value="recipe.difficulty" min="0" max="5">
                             </b-progress-bar>
                         </b-progress>
                     </b-col>
@@ -131,10 +131,18 @@
         created() {
             this.recipes = JSON.parse(localStorage.getItem('recipes'))
             this.recipe = this.recipes.find(e => e.id == this.id);
+            this.$title = this.recipe.title;
             this.username = JSON.parse(localStorage.getItem('allUsers'))[this.recipe.userId - 1].username;
             this.rating = this.getRating();
         },
         methods: {
+            getVariant() {
+                if (this.recipe.difficulty < 3)
+                    return "success";
+                if (this.recipe.difficulty < 5)
+                    return "warning";
+                return "danger";
+            },
             enterRate() {
                 this.rateHover = true;
                 this.rating = this.recipe.ratings.find(e => e.userId == this.loggedUserId).rating;

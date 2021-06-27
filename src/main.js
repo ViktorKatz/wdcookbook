@@ -12,6 +12,9 @@ import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css';
 import * as VueGoogleMaps from 'vue2-google-maps';
 
 import VueBreadcrumbs from 'vue-2-breadcrumbs';
+import VuePageTitle from 'vue-page-title'
+
+Vue.use(VuePageTitle, {prefix: 'CookBook - '});
 
 Vue.use(VueGoogleMaps, {
     load: {

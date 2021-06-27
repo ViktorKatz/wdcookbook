@@ -83,6 +83,9 @@
                 mapcenter: { lat: 43.866627, lng: 20.155488 },
             }
         },
+        created() {
+            this.$title = this.$t('title.about');
+        }
     }
 
 </script>
