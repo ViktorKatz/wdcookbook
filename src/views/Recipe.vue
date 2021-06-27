@@ -131,6 +131,7 @@
         created() {
             this.recipes = JSON.parse(localStorage.getItem('recipes'))
             this.recipe = this.recipes.find(e => e.id == this.id);
+            this.$title = this.recipe.title;
             this.username = JSON.parse(localStorage.getItem('allUsers'))[this.recipe.userId - 1].username;
             this.rating = this.getRating();
         },
