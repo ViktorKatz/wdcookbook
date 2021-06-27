@@ -56,6 +56,7 @@ const messages = {
             cancel: "Ne"
         },
         categories: {
+            all: 'Svi recepti',
             appetizers: 'Predjela',
             mainCourses: 'Glavna jela',
             desserts: 'Deserti',

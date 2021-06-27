@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-row>
-            <h1 style="padding-bottom: 20px;">{{$t(categories[this.id - 1].i18n_name)}}</h1>
+            <h1 style="padding-bottom: 20px;">{{$t(categories[this.id].i18n_name)}}</h1>
             <b-col cols="12" lg="6">
                 <div style="text-align: left;">
                     {{$t('categories.sort')}}:
@@ -88,9 +88,12 @@
             }
         },
         created() {
-            this.$title = this.$t(categories[this.id - 1].i18n_name);
-            this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id);
-            this.searchRecipes = this.recipes;
+            this.$title = this.$t(categories[this.id].i18n_name);
+            this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id || this.id == 0);
+            if (this.$route.query.search) {
+                this.search = this.$route.query.search;
+                this.doSearch();
+            }
         },
         methods: {
             average(array) {
@@ -114,7 +117,7 @@
         },
         beforeRouteUpdate(to, from, next) {
             this.id = to.params.id;
-            this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id);
+            this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id || this.id == 0);
             this.search = "";
             this.sort = 0;
             this.resort(this.sort);
