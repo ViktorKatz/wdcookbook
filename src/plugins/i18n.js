@@ -24,6 +24,7 @@ const messages = {
             register: 'Napravite nov nalog',
             username: 'Korisničko ime',
             password: 'Šifra',
+            passwordAgain: 'Potvrdite šifru',
             usernamedesc: 'Korisničko ime se sastoji samo od slova i brojeva',
             passworddesc: 'Šifra mora imati makar 8 karaktera',
             greeting: 'Zdravo',
@@ -36,7 +37,9 @@ const messages = {
                 userExists: 'Već postoji korisnik sa tim korisničkim imenom',
                 userNotFound: 'Korisnik sa tim korisničkim imenom nije pronađen',
                 wrongPassword: 'Uneta šifra nije ispravna',
+                passwordsDontMatch: 'Šifre se ne poklapaju',
             },
+            regSuccess: 'Uspešno registrovan nalog',
         },
         addRecipe: {
             login: "Molimo vas da se ulogujete da biste dodali recept",

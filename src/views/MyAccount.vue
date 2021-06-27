@@ -51,6 +51,7 @@
                             header-border-variant="warning"
                             header-text-variant="dark"
                             border-variant="warning"
+                            body-class="light-warning"
                             class="mb-2">
                         <b-form @submit="loginSubmit">
                             <b-form-group id="loginUsernameGroup"
@@ -86,6 +87,7 @@
                             header-border-variant="warning"
                             header-text-variant="dark"
                             border-variant="warning"
+                            body-class="light-warning"
                             class="mb-2">
                         <b-form @submit="registerSubmit">
                             <b-form-group id="registerUsernameGroup"
@@ -109,8 +111,19 @@
                                               required>
                                 </b-form-input>
                             </b-form-group>
+                            <b-form-group id="registerPassword2Group"
+                                          v-bind:label="$t('account.passwordAgain')"
+                                          label-for="registerPassword2">
+                                <b-form-input id="registerPassword2"
+                                              type="password"
+                                              v-bind:placeholder="$t('account.passwordAgain')"
+                                              v-model="regPass2"
+                                              required>
+                                </b-form-input>
+                            </b-form-group>
                             <br />
                             <p class="text-danger"> {{ regError }} </p>
+                            <p class="text-success"> {{ regSuccess }} </p>
                             <b-button type="submit" variant="warning">{{ $t('account.register') }}!</b-button>
                         </b-form>
                     </b-card>
@@ -144,7 +157,9 @@
                 logError: "",
                 regUser: "",
                 regPass: "",
+                regPass2: "",
                 regError: "",
+                regSuccess: "",
                 loggedUserId: null,
                 loggedUserUsername: null,
             };
@@ -192,6 +207,13 @@
             registerSubmit(event) {
                 event.preventDefault();
 
+                this.regSuccess = ""; // In case of multiple account registration
+
+                if (this.regPass != this.regPass2) {
+                    this.regError = this.$t('account.error.passwordsDontMatch');
+                    return;
+                }
+
                 let allUsers = JSON.parse(localStorage.getItem('allUsers'));
 
                 if (allUsers == null) {
@@ -219,6 +241,11 @@
                 allUsers.push(newUser);
 
                 localStorage.setItem('allUsers', JSON.stringify(allUsers));
+
+                this.regSuccess = this.$t('account.regSuccess') + ' ' + this.regUser;
+                this.regUser = "";
+                this.regPass = "";
+                this.regPass2 = "";
             },
             logout() {
                 this.loggedUserId = null;
