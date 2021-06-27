@@ -99,7 +99,8 @@ const messages = {
             prev: 'Prethodna',
             noVideo: 'Video nije dostupan',
             addComment: 'Komentariši',
-            duration: 'Vreme pripreme'
+            duration: 'Vreme pripreme',
+            login: 'Ulogujte se da biste komentarisali'
         },
         blog: {
             haveAlook: 'Pogledajte najnovije novosti iz sveta kulinarstva',

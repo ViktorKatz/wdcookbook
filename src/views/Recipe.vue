@@ -77,9 +77,25 @@
                          :user="users[comment.userId - 1].username"
                          :comment="comment.comment">
             </CommentCard>
-            <b-textarea class="new-comment" v-model="newcomment">
-            </b-textarea>
-            <b-button class="mb" variant="warning" @click="addComment()">{{$t('recipe.addComment')}}</b-button>
+            <div v-if="loggedUserId > 0">
+                <b-textarea class="new-comment" v-model="newcomment">
+                </b-textarea>
+                <b-button class="mb" variant="warning" @click="addComment()">{{$t('recipe.addComment')}}</b-button>
+            </div>
+            <div v-else>
+                <b-row style="padding-bot: 30px;">
+                    <b-col cols="12">
+                        <h1>{{ $t('recipe.login') }}</h1>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col cols="12">
+                        <router-link :to="'/myAccount'">
+                            <b-button style="margin: 10px" variant="danger">{{ $t('account.login') }}</b-button>
+                        </router-link>
+                    </b-col>
+                </b-row>
+            </div>
         </b-container>
     </div>
 </template>
@@ -134,6 +150,7 @@
             this.$title = this.recipe.title;
             this.username = JSON.parse(localStorage.getItem('allUsers'))[this.recipe.userId - 1].username;
             this.rating = this.getRating();
+            console.log(this.loggedUserId);
         },
         methods: {
             getVariant() {
