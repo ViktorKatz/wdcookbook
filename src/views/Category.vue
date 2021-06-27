@@ -104,16 +104,17 @@
             },
             resort(val) {
                 this.recipes = this.recipes.sort(this.sortfs[val]);
+                this.doSearch();
             },
             doSearch(e) {
-                e.preventDefault();
+                if (e)
+                    e.preventDefault();
                 this.searchRecipes = this.recipes.filter(e => e.title.toLowerCase().search(this.search) != -1);
             }
         },
         beforeRouteUpdate(to, from, next) {
             this.id = to.params.id;
             this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id);
-            this.searchRecipes = this.recipes;
             this.search = "";
             this.sort = 0;
             this.resort(this.sort);
