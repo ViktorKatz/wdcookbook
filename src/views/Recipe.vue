@@ -165,6 +165,12 @@
                 localStorage.setItem('recipes', JSON.stringify(this.recipes));
                 this.newcomment = "";
             }
-        }
+        },
+        beforeRouteUpdate(to, from, next) {
+            this.id = to.params.id;
+            this.recipe = this.recipes.find(e => e.id == this.id);
+            this.rating = this.getRating();
+            next();
+        },
     }
 </script>
