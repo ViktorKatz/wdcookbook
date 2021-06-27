@@ -51,6 +51,7 @@
                             header-border-variant="warning"
                             header-text-variant="dark"
                             border-variant="warning"
+                            body-class="light-warning"
                             class="mb-2">
                         <b-form @submit="loginSubmit">
                             <b-form-group id="loginUsernameGroup"
@@ -86,6 +87,7 @@
                             header-border-variant="warning"
                             header-text-variant="dark"
                             border-variant="warning"
+                            body-class="light-warning"
                             class="mb-2">
                         <b-form @submit="registerSubmit">
                             <b-form-group id="registerUsernameGroup"
