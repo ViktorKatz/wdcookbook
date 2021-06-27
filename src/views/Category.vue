@@ -92,8 +92,8 @@
             this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id || this.id == 0);
             if (this.$route.query.search) {
                 this.search = this.$route.query.search;
-                this.doSearch();
             }
+            this.doSearch();
         },
         methods: {
             average(array) {
@@ -112,6 +112,7 @@
             doSearch(e) {
                 if (e)
                     e.preventDefault();
+                this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id || this.id == 0);
                 this.searchRecipes = this.recipes.filter(e => e.title.toLowerCase().search(this.search) != -1);
             }
         },
