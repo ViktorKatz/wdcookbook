@@ -22,7 +22,7 @@
                                             :category="recipe.category"
                                             :picture="(recipe.pictures.length > 0) ? recipe.pictures[0]:'/missing.jpg'"
                                             :id="recipe.id"
-                                            :userId="recipe.userId" />
+                                            :userId="-1" />
                             </b-col>
                         </b-row>
                     </b-container>

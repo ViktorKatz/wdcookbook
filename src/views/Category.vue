@@ -32,7 +32,7 @@
                     :category="recipe.category"
                     :picture="(recipe.pictures.length > 0) ? recipe.pictures[0]:'/missing.jpg'"
                     :id="recipe.id"
-                    :userId="recipe.userId">
+                    :userId="-1">
             >
         </RecipeCard>
     </div>
@@ -106,13 +106,13 @@
                 return total / array.length;
             },
             resort(val) {
+                this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id || this.id == 0);
                 this.recipes = this.recipes.sort(this.sortfs[val]);
                 this.doSearch();
             },
             doSearch(e) {
                 if (e)
                     e.preventDefault();
-                this.recipes = JSON.parse(localStorage.getItem('recipes')).filter(e => e.category == this.id || this.id == 0);
                 this.searchRecipes = this.recipes.filter(e => e.title.toLowerCase().search(this.search) != -1);
             }
         },
