@@ -8,8 +8,8 @@
                        border-variant="warning">
                 <div class="title">
                     <h3>{{title}}</h3>
-                    <router-link :to="'/categories/'+category">
-                        {{$t(categories[parseInt(category) - 1].i18n_name)}}
+                    <router-link :to="'/category/'+category">
+                        {{$t(categories[parseInt(category)].i18n_name)}}
                     </router-link>
                 </div>
             </b-card-header>

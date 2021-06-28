@@ -167,7 +167,7 @@ import categories from '@/data/categories.js'
                 allRecipes.push(recipe);
 
                 localStorage.setItem("recipes", JSON.stringify(allRecipes));
-                this.$router.push('myAccount');
+                this.$router.push('/recipe/' + recipe.id);
                 return;
             }
         },
