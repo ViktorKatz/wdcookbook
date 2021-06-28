@@ -28,7 +28,8 @@ Vue.use(VueBreadcrumbs, {
         '        <nav v-if="$breadcrumbs.length" aria-label="breadcrumb">\n' +
         '            <ol class="breadcrumb mb-0 mt-0 px-4 light-warning">\n' +
         '                <li v-for="(crumb, key) in $breadcrumbs" v-if="crumb.meta.breadcrumb" :key="key" class="breadcrumb-item active" aria-current="page">\n' +
-        '                    {{ $t(getBreadcrumb(crumb.meta.breadcrumb)) }}' +
+        '                    <router-link :to="{ path: getPath(crumb) }" v-if="key != $breadcrumbs.length - 1">{{ $t(getBreadcrumb(crumb.meta.breadcrumb)) }}</router-link>' +
+        '                    <span v-else>{{ $t(getBreadcrumb(crumb.meta.breadcrumb)) }}</span>' +
         '                </li>\n' +
         '            </ol>\n' +
         '        </nav>'
