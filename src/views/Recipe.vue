@@ -172,7 +172,8 @@
         },
         methods: {
             addPicture() {
-                console.log(this.picUrl);
+                if (this.picUrl == "")
+                    return;
                 this.recipe.pictures.push(this.picUrl);
                 localStorage.setItem('recipes', JSON.stringify(this.recipes));
                 this.picUrl = "";
