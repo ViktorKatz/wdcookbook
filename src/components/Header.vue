@@ -18,8 +18,8 @@
 
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-form action="/searchall">
-                        <b-form-input id="searchbar" name ="query" size="sm" class="mr-sm-2" v-bind:placeholder="$t('header.search')"></b-form-input>
+                    <b-nav-form action="/category/0">
+                        <b-form-input id="searchbar" name ="search" size="sm" class="mr-sm-2" v-bind:placeholder="$t('header.search')"></b-form-input>
                         <b-button size="sm" class="my-2 my-sm-0" type="submit"> <b-icon-search /> </b-button>
                     </b-nav-form>
 

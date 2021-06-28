@@ -56,6 +56,7 @@ const messages = {
             cancel: "Ne"
         },
         categories: {
+            all: 'Svi recepti',
             appetizers: 'Predjela',
             mainCourses: 'Glavna jela',
             desserts: 'Deserti',
@@ -98,7 +99,20 @@ const messages = {
             prev: 'Prethodna',
             noVideo: 'Video nije dostupan',
             addComment: 'Komentariši',
-            duration: 'Vreme pripreme'
+            duration: 'Vreme pripreme',
+            login: 'Ulogujte se da biste komentarisali',
+            addPicture: {
+                button: 'Dodaj sliku',
+                title: 'Dodaj sliku',
+                cancel: 'Odustani',
+                ok: 'Dodaj'
+            },
+            addVideo: {
+                button: 'Dodaj video',
+                title: 'Dodaj video',
+                cancel: 'Odustani',
+                ok: 'Dodaj'
+            }
         },
         blog: {
             haveAlook: 'Pogledajte najnovije novosti iz sveta kulinarstva',
