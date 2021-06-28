@@ -13,8 +13,11 @@
                 <b-row>
                     <b-col cols="12" lg="4">
                         <h3 class="title">{{$t('recipe.rating')}}</h3>
-                        <div @mouseenter="enterRate()" @mouseleave="leaveRate()">
+                        <div v-if="loggedUser > 0" @mouseenter="enterRate()" @mouseleave="leaveRate()">
                             <b-rating class="pad" :variant="rateHover?'warning':'info'" :value="getRating()" v-model="rating" @change="rate" />
+                        </div>
+                        <div v-else>
+                            <b-rating class="pad" variant="info" :value="getRating()" v-model="rating" readonly />
                         </div>
                     </b-col>
                     <b-col cols="6" lg="4">
