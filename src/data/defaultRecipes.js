@@ -48,7 +48,7 @@ const defaultRecipes = [
         category: 4,
         title: 'Langoš',
         desc: 'Meleg tejbe tesszük az 1 mk cukrot, belemorzsoljuk az élesztőt.\n    Tetejére kevés lisztet szórunk.\n    A fokhagymát megpucoljuk, lereszeljük, kevés vízzel, sóval elkeverjük. Ezzel kenjük meg a lángost.\n    A kovászhoz adjuk a többi lisztet, tejet szükség szerint, és jól kidolgozzuk, kelesztjük.\n    Elosztjuk kisebb gombócokra, 15 percig kelesztjük, és olajos kézzel széthúzzuk, majd forró olajban kisütjük.\n\n     Tisztítsunk meg 2-3 gerezd fokhagymát.\n    Törjük össze fokhagymatörővel, vagy aprítsuk fel.\n    Rakjunk egy kis tálkába 1-2 evőkanál olajat, és adjuk hozzá az összetört fokhagymát.\n    Rakjunk egy csipet sót a tetejére, majd keverjük össze.\n    (Vannak akik hozzászoktak adni még egy fél deci vizet is a fokhagymás öntethez.)\r\n\r\n    Hagyjuk állni körülbelül 10 percig, hogy összeérjenek az ízek.',
-        difficulty: 1,
+        difficulty: 2,
         preptime: 15,
         ratings: [{ userId: 1, rating: 5 },
         { userId: 2, rating: 5 },
@@ -78,6 +78,27 @@ const defaultRecipes = [
         comments: [
             { userId: 1, comment: 'Njam njam' },
             { userId: 2, comment: 'Ne njam njam.' },
+        ]
+    },
+    {
+        id: 8,
+        userId: 4,
+        category: 3,
+        title: 'Nasuvo sa makom',
+        desc: 'Sastojci\n\nZa testo:\n    400 g testenine\n    1 kašika ulja\n    1 kašičica soli\n\nZa fil od maka:\n    200 g mlevenog maka\n    200 ml mleka\n    1 kesica vanilin šećera\n    2 kašike šećera\n	\nPriprema:\nSkuvati makarone u slanoj vodi, procediti i pomešati sa uljem. Dok se makarone kuvaju u šerpu staviti mleko, dodati šećer, vanil šećer i mak. Kuvati na tihoj vatri 10-ak minuta, mleko ispari i masa bude kremasta. Pomešati sa kuvanim makaronama. Po želji možete još pošećeriti naknadno:)',
+        difficulty: 1,
+        preptime: 40,
+        ratings: [
+            { userId: 1, rating: 4 },
+            { userId: 2, rating: 5 },
+            { userId: 3, rating: 5 },
+        ],
+        video: '',
+        pictures: ['https://www.recepti.com/img/recipe/33950-nasuvo-sa-makom_zoom.jpg'],
+        comments: [
+            { userId: 1, comment: 'Njam njam' },
+            { userId: 2, comment: 'Kvalitet na prvom mestu.' },
+            { userId: 4, comment: 'Praviti s ljubavlju obavezno!' },
         ]
     },
     {
@@ -159,6 +180,93 @@ const defaultRecipes = [
         pictures: ['https://i.ytimg.com/vi/xWPdgvVP2XI/maxresdefault.jpg'],
         comments: [
             { userId: 1, comment: 'Njam njam' },
+        ]
+    },
+    {
+        id: 9,
+        userId: 2,
+        category: 3,
+        title: 'Kurtoš kolač',
+        desc: 'Sastojci\nTesto:\n    750 g belog (oštrog) brašna\n    30 g suvog kvasca\n    300 ml mleka\n\nKremica za testo:\n    100 g otopljenog putera/margarina\n    60 g šećera\n    2 cela jajeta\n    2 kesice vanilinog šećera\n    2 prstohvata soli\n\nDekoracija/premaz:\n    oko 70 g sitno seckani ili mleveni lešnik\n    50 g otopljenog putera/margarina\n    1/2 čaše otopljenig meda\n    100 g šećera-beli/smedji\n\nPriprema\n    Sipati brašno u činiju, napraviti kašikom rupu po sredini, posuti so po obodu, a u sredinu sipati nadošli kvasac (u mleku). U to dodati 300 ml mleka, polako mešajući, sve dok ne sipamo svo mleko. Zamesiti testo koje treba da bude "bljuckavo", i da ostane još brašna okolo. Ostaviti poklopljeno krpom oko 15 minuta.\n    Za to vreme pripremiti ostale sastojke: u činiju sa šećerom dodamo otopljen puter, mešamo žicom, dodamo jaja i sve sjedinimo. Kad je testo naraslo dodamo mu ovu kremicu i mešamo kašikom da sjedinimo sa ostatkom brašna. Potom mesimo testo rukom 10 minuta, sve dok ne bude više lepljivo. Testo ostaviti 60 minuta prekriveno, na toplom mestu. Od konzervi ili kartona praviti formu tako što karton ili kozervu umotamo u alu-foliju, tako da i krajevi budu pod folijom. Postoje i originalni kalupi. Kurtos kolač & Dimnjak kolač ~ Kolač iz Transilvanije\n    Kada je testo spremno, pobrašnimo površinu i rastanjimo oklagijom na koru debljine 1cm. Sečemo trake širine oko 1-2 cm. Formu/kalupčić namažemo otopljenim puterom pa navijamo traku i kraj zalepimo četkicom sa otopljenim puterom. Formu rukom srolamo po pobrašnjenoj površini da se trake na kalupu izravnaju, svaku premazati četkicom u otopljenom puteru i uvaljti dobro u šećer. Kurtos kolač & Dimnjak kolač ~ Kolač iz Transilvanije\n    Postaviti kurtose na pleh sa pek papirom. Peći u zagrejanoj rerni 10-15 minuta na 160C (rerna sa ventilatorom max. 10 minuta). Kurtos kolač & Dimnjak kolač ~ Kolač iz Transilvanije\n    Pečene kurtose ostaviti da se ohlade, pa skidati gurajući kalup rukom od užeg ka širem delu, tako da kalup ispadne. Sada kurtos premazati četkicom umoćenom u rastopljeni med i posuti sitno seckanim/mlevenim lešnikom, kokosom, šećerom ili nekom drugom kombinacijom: kokosom, orahom, cimetom, bademom, plazmom, euro-krem + plazma, pekmez od narandže sa čokoladom daje divan ukus jafe, džem od kajsije i orah. ',
+        difficulty: 5,
+        preptime: 180,
+        ratings: [
+            { userId: 1, rating: 5 },
+            { userId: 2, rating: 5 },
+            { userId: 3, rating: 5 },
+        ],
+        video: '',
+        pictures: ['https://www.cover.rs/media/blog/hungary_k_rt_skal_cs-1.jpg', 'http://www.zenasamja.me/images/full/2915.jpg', 'http://4.bp.blogspot.com/-LqnS8DzGgvs/TwMhQDEuAUI/AAAAAAAAHm0/BCXwAvpusTg/s400/chimney_cake.jpg'],
+        comments: [
+            { userId: 5, comment: 'chimney cake' },
+            { userId: 2, comment: 'Kurtoš kolač.' },
+            { userId: 5, comment: 'chimney cake' },
+            { userId: 2, comment: 'Kurtoš.' },
+            { userId: 5, comment: 'chimney' },
+            { userId: 1, comment: 'Njam njam' },
+            { userId: 2, comment: 'Kurtoš.' },
+            { userId: 5, comment: 'chimney bre' },
+            { userId: 2, comment: 'Kurtoš.' },
+        ]
+    },
+    {
+        id: 10,
+        userId: 6,
+        category: 3,
+        title: 'Žerbo kocke',
+        desc: 'Zagrejte mleko da bude mlako, dodajte šećer i izmrvljen svež kvasac, kao i dve kašike brašna, pa ostavite da odstoji desetak minuta da kvasac nadođe. Umutite mast sa žumancima, dodajte ih mešavini sa kvascem, pa postepeno dodajte brašno i sve dobro izmesite. Znaćete da je testo pripremljeno kad počne da se odvaja od prstiju.\nPodelite testo u četiri loptice, pa ih pospite sa malo brašna, prekrijte krpom i ostavite sat vremena da stoji na sobnoj temperaturi.\nPosle sat vremena razvucite sve četiri loptice od testa oklagijom u dimenzijama pleha u kom ćete peći kolač. Pleh namažite mašću ili uljem, spustite prvu koru od testa, premažite je džemom od kajsija, pospite trećinom šećera i trećinom mlevenih oraha, pa preko nje stavite drugi deo testa. Ponovite filovanje i isti postupak primenite i za treću koru od testa. Kad preko trećeg fila stavite četvrtu koru od testa prekrijte kolač krpom i ostavite ga još malo da naraste.\n\nKolač pecite pola sata u rerni na 180 stepeni. Ukoliko primetite da gornja kora brzo tamni, prekrijte kolač aluminijumskom folijom i nastavite da ga pečete.\nIzvadite i pustite da se ohladi, pa ga prelijte vrućom čokoladom rastopljenom sa mlekom i puterom.',
+        difficulty: 4,
+        preptime: 150,
+        ratings: [
+            { userId: 1, rating: 5 },
+            { userId: 2, rating: 4 },
+            { userId: 3, rating: 4 },
+        ],
+        video: '',
+        pictures: ['https://xdn.tf.rs/2020/10/13/zerbo-kocke-830x0.jpg'],
+        comments: [
+            { userId: 2, comment: 'Ćao tetka!' },
+        ]
+    },
+    {
+        id: 11,
+        userId: 5,
+        category: 4,
+        title: 'Granola bar',
+        desc: 'Ovo je obrok koji zahteva pripremu, ali takođe može da stoji, pa ga možete raspodeliti za više dana.\nMožete kombinovati doslovno kako hoćete, evo jednog mog predloga.\n\n3 kašike ovsenih pahuljica\n1 kašika mlevenog lana\n1 kašika kakao praha\n1 jaje\nmalo mleka\n150 grama bobičastog voća po izboru\n\nSve pomešate, izlijete na pek papir i stavite da se peče na 180 stepeni oko pola sata do 40 minuta.\n\nOvo ukupno ima oko 350 kalorija što je po kalorijskoj vrednosti više doručak nego užina tako da se od ove mere dobiju 2 užine.\nA vi svakako možete i duplirati smesu, pa da dobijete 4 užine. ',
+        difficulty: 3,
+        preptime: 40,
+        ratings: [
+            { userId: 1, rating: 2 },
+            { userId: 2, rating: 2 },
+            { userId: 3, rating: 4 },
+        ],
+        video: 'https://www.youtube.com/embed/7_YBUMoYZEE',
+        pictures: ['https://fitt.rs/wp-content/uploads/2020/07/ideje-za-u%C5%BEinu-7-1024x819.jpeg', 'https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1392,h_1392/k%2Farchive%2F15a57c2b302c7c3dcfabc0ea9e2934dd90bcd27b'],
+        comments: [
+            { userId: 1, comment: 'Lele ovo nešto zdravo!' },
+            { userId: 2, comment: 'Zdravo' },
+        ]
+    },
+    {
+        id: 12,
+        userId: 1,
+        category: 4,
+        title: 'Brusketi sa rikotom i narom',
+        desc: 'U odgovarajuću posudu sipati balzamiko sirće, šećer i limunov sok. Zagrejati do vrenja i na umerenoj vatri redukovati na pola količine. Preručiti u staklenu teglicu i ostaviti da se ohladi.\n\nU međuvremenu, iseći baget na šnite i grilovati ih par minuta, do zlatno smeđe boje.\n\nNa svaku brusketu naneti sloj rikota sira, rukolu i prstohvat nara.\n\nPreliti redukovanim balzamikom i posuti krupnom morskom solju.\n\nBruskete sa rikotom i narom poslužiti odmah.\n\nPreporuka je servirati uz poveću količinu crnog čaja.',
+        difficulty: 1,
+        preptime: 20,
+        ratings: [
+            { userId: 1, rating: 4 },
+            { userId: 2, rating: 5 },
+            { userId: 3, rating: 4 },
+            { userId: 4, rating: 2 },
+            { userId: 5, rating: 3 },
+        ],
+        video: '',
+        pictures: ['https://www.bakersdelight.com.au/wp-content/uploads/2018/10/Brie-and-Pomegranate-Bruschetta.jpg', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/Pomegranate-Pistachio-Crostini_EXPS_SDDJ17_181270_C08_25_5b-2.jpg', 'https://rs.n1info.com/wp-content/uploads/2019/08/shutterstock-788439151-270892.jpeg'],
+        comments: [
+            { userId: 1, comment: 'Можете посути и пистаћима ко воли' },
         ]
     },
 ];
