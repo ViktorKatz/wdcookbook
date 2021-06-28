@@ -37,10 +37,10 @@
                     border-variant="warning"
                     body-class="light-warning">
                 <b-row>
-                    <b-col cols="12" lg="6">
+                    <b-col class="recipe-text" cols="12" :lg="recipe.video != '' ? 6 : 10" :offset-lg="recipe.video != '' ? 0 : 1">
                         {{recipe.desc}}
                     </b-col>
-                    <b-col cols="12" lg="6">
+                    <b-col cols="12" lg="6" v-if="recipe.video != ''">
                         <iframe v-if="recipe.video != ''" width="100%" height="315"
                                 title="YouTube video player"
                                 frameborder="0"
@@ -103,6 +103,11 @@
 
     .gallery {
         height: 480px;
+    }
+
+    .recipe-text {
+        white-space: pre-line;
+        text-align: justify;
     }
 </style>
 <script>
