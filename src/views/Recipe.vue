@@ -54,25 +54,29 @@
                         <div v-else>
                             <b-button variant="warning" v-b-modal="'addVideo'">{{$t('recipe.addVideo.button')}}</b-button>
                             <b-modal id="addVideo"
-                                        @ok="addVideo()"
-                                        :ok-title="$t('recipe.addVideo.ok')"
-                                        :cancel-title="$t('recipe.addVideo.cancel')"
-                                        :title="$t('recipe.addVideo.title')"
-                                        header-close-variant="dark"
-                                        header-text-variant="dark"
-                                        header-bg-variant="warning"
-                                        header-border-variant="danger"
-                                        content-class="light-warning"
-                                        ok-variant="danger">
+                                     @ok="addVideo()"
+                                     :ok-title="$t('recipe.addVideo.ok')"
+                                     :cancel-title="$t('recipe.addVideo.cancel')"
+                                     :title="$t('recipe.addVideo.title')"
+                                     header-close-variant="dark"
+                                     header-text-variant="dark"
+                                     header-bg-variant="warning"
+                                     header-border-variant="danger"
+                                     content-class="light-warning"
+                                     ok-variant="danger">
                                 <b-input placeholder="URL" v-model="vidUrl"></b-input>
                             </b-modal>
                         </div>
                     </b-col>
                 </b-row>
+                <b-row>
+                    <b-col cols="12" lg="2" offset-lg="2">
+                        <b-button variant="danger">PDF</b-button>
+                    </b-col>
+                </b-row>
             </b-card>
             <hr />
-            <b-card
-                    :header="$t('recipe.pictures')"
+            <b-card :header="$t('recipe.pictures')"
                     header-class="h3"
                     header-bg-variant="warning"
                     border-variant="warning"
@@ -90,16 +94,16 @@
             </b-card>
             <hr />
             <b-modal id="addPicture"
-                        @ok="addPicture()"
-                        :ok-title="$t('recipe.addPicture.ok')"
-                        :cancel-title="$t('recipe.addPicture.cancel')"
-                        :title="$t('recipe.addPicture.title')"
-                        header-close-variant="dark"
-                        header-text-variant="dark"
-                        header-bg-variant="warning"
-                        header-border-variant="danger"
-                        content-class="light-warning"
-                        ok-variant="danger">
+                     @ok="addPicture()"
+                     :ok-title="$t('recipe.addPicture.ok')"
+                     :cancel-title="$t('recipe.addPicture.cancel')"
+                     :title="$t('recipe.addPicture.title')"
+                     header-close-variant="dark"
+                     header-text-variant="dark"
+                     header-bg-variant="warning"
+                     header-border-variant="danger"
+                     content-class="light-warning"
+                     ok-variant="danger">
                 <b-input placeholder="URL" v-model="picUrl"></b-input>
             </b-modal>
             <h3>{{$t('recipe.comments')}}</h3>
@@ -214,7 +218,7 @@
             },
             enterRate() {
                 this.rateHover = true;
-                let rating = this.recipe.ratings.find(e => e.userId == this.loggedUserId) || {rating: 0};
+                let rating = this.recipe.ratings.find(e => e.userId == this.loggedUserId) || { rating: 0 };
                 this.rating = rating.rating;
             },
             leaveRate() {
