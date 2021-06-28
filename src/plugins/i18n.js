@@ -106,6 +106,12 @@ const messages = {
                 title: 'Dodaj sliku',
                 cancel: 'Odustani',
                 ok: 'Dodaj'
+            },
+            addVideo: {
+                button: 'Dodaj video',
+                title: 'Dodaj video',
+                cancel: 'Odustani',
+                ok: 'Dodaj'
             }
         },
         blog: {

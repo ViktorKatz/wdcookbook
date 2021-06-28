@@ -40,10 +40,10 @@
                     border-variant="warning"
                     body-class="light-warning">
                 <b-row>
-                    <b-col class="recipe-text" cols="12" :lg="recipe.video != '' ? 6 : 10" :offset-lg="recipe.video != '' ? 0 : 1">
+                    <b-col class="recipe-text" cols="12" :lg="(recipe.video != '' || loggedUserId == recipe.userId) ? 6 : 10" :offset-lg="(recipe.video != '' || loggedUserId == recipe.userId)? 0 : 1">
                         {{recipe.desc}}
                     </b-col>
-                    <b-col cols="12" lg="6" v-if="recipe.video != ''">
+                    <b-col cols="12" lg="6" v-if="recipe.video != '' || recipe.userId == loggedUserId">
                         <iframe v-if="recipe.video != ''" width="100%" height="315"
                                 title="YouTube video player"
                                 frameborder="0"
@@ -52,13 +52,26 @@
                                 :src="recipe.video">
                         </iframe>
                         <div v-else>
-                            {{$t('recipe.noVideo')}}
+                            <b-button variant="warning" v-b-modal="'addVideo'">{{$t('recipe.addVideo.button')}}</b-button>
+                            <b-modal id="addVideo"
+                                        @ok="addVideo()"
+                                        :ok-title="$t('recipe.addVideo.ok')"
+                                        :cancel-title="$t('recipe.addVideo.cancel')"
+                                        :title="$t('recipe.addVideo.title')"
+                                        header-close-variant="dark"
+                                        header-text-variant="dark"
+                                        header-bg-variant="warning"
+                                        header-border-variant="danger"
+                                        content-class="light-warning"
+                                        ok-variant="danger">
+                                <b-input placeholder="URL" v-model="vidUrl"></b-input>
+                            </b-modal>
                         </div>
                     </b-col>
                 </b-row>
             </b-card>
             <hr />
-            <b-card v-if="recipe.pictures.length != 0"
+            <b-card
                     :header="$t('recipe.pictures')"
                     header-class="h3"
                     header-bg-variant="warning"
@@ -165,7 +178,8 @@
                 rateHover: false,
                 users: JSON.parse(localStorage.getItem('allUsers')),
                 newcomment: "",
-                picUrl: ""
+                picUrl: "",
+                vidUrl: ""
             }
         },
         created() {
@@ -183,6 +197,13 @@
                 this.recipe.pictures.push(this.picUrl);
                 localStorage.setItem('recipes', JSON.stringify(this.recipes));
                 this.picUrl = "";
+            },
+            addVideo() {
+                if (this.vidUrl == "")
+                    return;
+                this.recipe.video = this.vidUrl;
+                localStorage.setItem('recipes', JSON.stringify(this.recipes));
+                this.vidUrl = "";
             },
             getVariant() {
                 if (this.recipe.difficulty < 3)
