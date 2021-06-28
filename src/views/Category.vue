@@ -43,6 +43,7 @@
         display: flex;
         flex-direction: row;
     }
+
     h3 {
         padding-bottom: 20px;
     }
@@ -94,6 +95,32 @@
                 this.search = this.$route.query.search;
             }
             this.doSearch();
+
+            // Update breadcrumbs
+            let bc_items = [
+                {
+                    text: this.$t('breadcrumbs.home'),
+                    to: {
+                        name: 'Home'
+                    }
+                },
+                {
+                    text: this.$t(categories[this.id].i18n_name),
+                },
+            ];
+            if (this.id != 0) {
+                bc_items.splice(1, 0, {
+                    text: this.$t(categories[0].i18n_name),
+                    to: {
+                        name: 'Category',
+                        params: {
+                            id: 0
+                        }
+                    }
+                })
+            }
+            this.$emit('update-breadcrumbs', bc_items);
+            // End update breadcrumbs
         },
         methods: {
             average(array) {
@@ -122,6 +149,33 @@
             this.search = "";
             this.sort = 0;
             this.resort(this.sort);
+
+            // Update breadcrumbs
+            let bc_items = [
+                {
+                    text: `${this.$t('breadcrumbs.home')}`,
+                    to: {
+                        name: 'Home'
+                    }
+                },
+                {
+                    text: this.$t(categories[this.id].i18n_name),
+                },
+            ];
+            if (this.id != 0) {
+                bc_items.splice(1, 0, {
+                    text: this.$t(categories[0].i18n_name),
+                    to: {
+                        name: 'Category',
+                        params: {
+                            id: 0
+                        }
+                    }
+                })
+            }
+            this.$emit('update-breadcrumbs', bc_items);
+            // End update breadcrumbs
+
             next();
         },
     }

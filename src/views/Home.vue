@@ -61,13 +61,19 @@
         },
         data() {
             return {
-                recipes: [{names: 'asd'}]
+                recipes: [{ names: 'asd' }],
+                bc_items: [
+                    {
+                        text: this.$t('breadcrumbs.home'),
+                    },
+                ]
             }
         },
         created() {
             this.recipes = JSON.parse(localStorage.getItem('recipes'));
             this.recipes = this.recipes.sort((a, b) => this.average(b.ratings) - this.average(a.ratings)).slice(0, 3);
             this.$title = this.$t('title.home');
+            this.$emit('update-breadcrumbs', this.bc_items);
         }
     }
 </script>
