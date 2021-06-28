@@ -187,7 +187,8 @@
             },
             enterRate() {
                 this.rateHover = true;
-                this.rating = this.recipe.ratings.find(e => e.userId == this.loggedUserId).rating;
+                let rating = this.recipe.ratings.find(e => e.userId == this.loggedUserId) || {rating: 0};
+                this.rating = rating.rating;
             },
             leaveRate() {
                 this.rateHover = false;
