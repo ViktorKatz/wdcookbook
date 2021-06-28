@@ -55,7 +55,7 @@ const defaultRecipes = [
         { userId: 3, rating: 5 },
         { userId: 1, rating: 5 },],
         video: 'https://www.youtube.com/embed/ffvmzbGS6Xk',
-        pictures: ['https://497543-1573563-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/02/hungarian-fried-bread-langos-recipe.jpg', 'https://travelfoodatlas.com/wp-content/uploads/2021/04/hungarian-langos.jpg', 'https://www.thespruceeats.com/thmb/s9G7FfTBy7BdcAFKna9AdvHOv64=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/hungarian-fried-bread-recipe-langos-1136590-11_preview-5b2bd96efa6bcc00365d6702.jpeg', 'https://dailynewshungary.com/wp-content/uploads/2019/03/L%C3%A1ngos-Hungarian-meal-potato.jpg'],
+        pictures: ['https://travelfoodatlas.com/wp-content/uploads/2021/04/hungarian-langos.jpg', 'https://497543-1573563-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/02/hungarian-fried-bread-langos-recipe.jpg', 'https://www.thespruceeats.com/thmb/s9G7FfTBy7BdcAFKna9AdvHOv64=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/hungarian-fried-bread-recipe-langos-1136590-11_preview-5b2bd96efa6bcc00365d6702.jpeg', 'https://dailynewshungary.com/wp-content/uploads/2019/03/L%C3%A1ngos-Hungarian-meal-potato.jpg'],
         comments: [
             { userId: 2, comment: 'A legjobb étel' },
             { userId: 1, comment: 'Njam njam' },
@@ -121,6 +121,24 @@ const defaultRecipes = [
         pictures: ["http://www.centarzdravlja.hr/site/assets/files/24757/riba61.jpg"],
         comments: [
             { userId: 3, comment: 'Nisam ljubitelj ovoga.' },
+            { userId: 1, comment: 'Njam njam' },
+        ]
+    },
+    {
+        userId: 2,
+        id: 6,
+        category: 1,
+        title: 'Šufnudle',
+        desc: 'Ogulite krompir i obarite ga u slanoj vodiKada je krompir obaren tj. kada postane mekan, ocedite vodu pa ga dobro izgnječiteDok je krompir još topao, dodajte margarin i dobro ga umešajte pa ostavite da se malo prohladi.U krompir dodajte jaja i dobro izmešajte.Postepeno dodajte brašno i mešajte (mesite) dok se testo ne ujednači.Dodajte onoliko brašna koliko je potrebno da se zamesi testo koje se ne lepi za prste.\n\n    Radnu površinu dobro pospite brašnom (da se testo ne bi lepilo) pa premesite testo još maloPodelite testo na nekoliko komada i od svakog napravite manji valjak od kog ćete odsecati komadiće debljine oko 1, a dužine oko 5 cantimetara.Oblikujte testo u valjčiće.\n\n    Posolite vodu i stavite je da proključaUbacite šufnudle u ključalu vodu i kuvajte ih oko pola sata, odnosno, dok ne isplivaju na površinuVodite računa da se šufnudle ne zalepe za dno šerpe kad ih ubacite u ključalu vodu. Ako se to ipak desi, samo ih „odlepite“ varjačom.\n\n    Dobro zagrejte ulje pa dodajte prezle i pržite ih dok malo ne potamneKako šufnudle mogu biti pripremane i kao slatko jelo, u prezle možete dodati šećer i cimetbarene i oceđene šufnudle uvijte u prezle sa svih strana, slažite u činiju i pospite preostalim prezlama.\n\n    Slatka varijanta: Uz tople šufnudle poslužite šećer i cimet.Slana varijanta: Tople šufnudle poslužite kao prilog uz neko meso u sosu. \nPrijatno!',
+        difficulty: 3,
+        preptime: 90,
+        ratings: [
+        { userId: 4, rating: 5 },
+        { userId: 5, rating: 3 },
+        { userId: 6, rating: 2 }],
+        video: "https://www.youtube.com/embed/xWPdgvVP2XI",
+        pictures: [],
+        comments: [
             { userId: 1, comment: 'Njam njam' },
         ]
     },

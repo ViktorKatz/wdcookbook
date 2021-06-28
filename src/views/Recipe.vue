@@ -55,7 +55,8 @@
                 </b-row>
             </b-card>
             <hr />
-            <b-card :header="$t('recipe.pictures')"
+            <b-card v-if="recipe.pictures.length != 0"
+                    :header="$t('recipe.pictures')"
                     header-class="h3"
                     header-bg-variant="warning"
                     border-variant="warning"
