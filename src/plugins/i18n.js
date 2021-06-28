@@ -134,14 +134,133 @@ const messages = {
         }
     },
     'en': {
+        about: {
+            title: 'About us',
+            whereWeAre: 'Where we are',
+            address: 'Address',
+            contact: 'Contact',
+            telephone: 'Telephone',
+            email: 'E-mail',
+            director: 'Director',
+            altRole: 'Señor CEO',
+            aboutUsText: 'Portal CookBook.rs was founded way back in 1912 with mission to promote culinary arts among young population across the world. During the golden sixties, the portal was subjected to massive changes, and since then is offered in more than 1000 languages. Today, the portal is visited by more than 4 million monthly users. Some of the numerous features include national recipes, visual representation of instructions, as well as a lot of fun for the whole family.',
+            missionAndVision: 'Mission and Vision',
+        },
+        account: {
+            pagedesc: 'Log in or register',
+            login: 'Log in',
+            register: 'Register',
+            username: 'Username',
+            password: 'Password',
+            passwordAgain: 'Confirm password',
+            usernamedesc: 'Username may only contain letters and numbers',
+            passworddesc: 'Password must be at least 8 characters long',
+            greeting: 'Hello',
+            yourRecipes: 'Your recipes',
+            yourComments: 'Your comments',
+            yourRatings: 'Your ratings',
+            logout: 'Log out',
+            logoutQuestion: 'Are you sure you want to log out?',
+            error: {
+                userExists: 'A user with that username already exists',
+                userNotFound: 'User with that username does not exist',
+                wrongPassword: 'Wrong password',
+                passwordsDontMatch: 'Passwords do not match',
+            },
+            regSuccess: 'Successfully registered account',
+        },
+        addRecipe: {
+            login: "Please log in to add a recipe",
+            pagedesc: "Add a new recipe",
+            name: "Title",
+            type: "Category",
+            duration: "Preparation time (minutes)",
+            difficulty: "Difficulty",
+            instructions: "Instructions",
+            add: "Add",
+            confirm: "Are you sure",
+            confirmQ: "Are you sure you want to delete the recipe",
+            ok: "Yes",
+            cancel: "No"
+        },
+        categories: {
+            all: 'All recipes',
+            appetizers: 'Appetizers',
+            mainCourses: 'Main courses',
+            desserts: 'Desserts',
+            snacks: 'Snacks',
+            sort: "Sort by",
+            order: {
+                id: "Order added",
+                difficulty: "Difficulty",
+                rating: "Average rating",
+                asc: "ascending",
+                desc: "descending"
+            }
+        },
         header: {
             lang: 'Language',
             search: 'Search',
+            home: 'Home',
+            recipes: 'Recipes',
+            addRecipe: 'Add recipe',
+            myAccount: 'My account',
+            aboutUs: 'About us',
+        },
+        footer: {
+            sitedesc: 'Culinary corner',
+            authorship: 'Copyright 2021,  Viktor Katzenberger, Dragan Milovančević,  Software Engineering Department, School of Electrical Engineering, Belgrade',
         },
         homepage: {
-            title: 'Welcome to CookBook!',
+            title: 'Welcome to the CookBook!',
+            subtitle: 'Where all your culinary dreams come vue',
+            bestRatedRecipes: 'Best rated recipes',
+        },
+        recipe: {
+            rating: 'Rating',
+            difficulty: 'Difficulty',
+            by: 'by',
+            instructions: 'Instructions',
+            comments: 'Comments',
+            pictures: 'Pictures',
+            next: 'Next',
+            prev: 'Previous',
+            noVideo: 'Video not available',
+            addComment: 'Comment',
+            duration: 'Preparation time',
+            login: 'Please log in to comment',
+            addPicture: {
+                button: 'Add picture',
+                title: 'Add picture',
+                cancel: 'Cancel',
+                ok: 'Add'
+            },
+            addVideo: {
+                button: 'Add video',
+                title: 'Add video',
+                cancel: 'Cancel',
+                ok: 'Add'
+            }
+        },
+        blog: {
+            haveAlook: 'Take a look at the freshest news from the culinary world',
+            author: 'Author',
+            date: 'Date',
+            moreinfo: 'More information...',
+        },
+        breadcrumbs: {
+            home: 'Home',
+            about: 'About us',
+            myAccount: 'My account',
+            addRecipe: 'Add recipe',
+        },
+        title: {
+            home: "Homepage",
+            myAccount: "My account",
+            about: "About us",
+            addRecipe: "New recipe"
         }
-    },
+    }
 };
 
 const i18n = new VueI18n({
