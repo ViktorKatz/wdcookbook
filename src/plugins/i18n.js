@@ -100,7 +100,13 @@ const messages = {
             noVideo: 'Video nije dostupan',
             addComment: 'Komentariši',
             duration: 'Vreme pripreme',
-            login: 'Ulogujte se da biste komentarisali'
+            login: 'Ulogujte se da biste komentarisali',
+            addPicture: {
+                button: 'Dodaj sliku',
+                title: 'Dodaj sliku',
+                cancel: 'Odustani',
+                ok: 'Dodaj'
+            }
         },
         blog: {
             haveAlook: 'Pogledajte najnovije novosti iz sveta kulinarstva',

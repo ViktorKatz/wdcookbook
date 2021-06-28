@@ -13,7 +13,7 @@
                 <b-row>
                     <b-col cols="12" lg="4">
                         <h3 class="title">{{$t('recipe.rating')}}</h3>
-                        <div v-if="loggedUser > 0" @mouseenter="enterRate()" @mouseleave="leaveRate()">
+                        <div v-if="loggedUserId > 0" @mouseenter="enterRate()" @mouseleave="leaveRate()">
                             <b-rating class="pad" :variant="rateHover?'warning':'info'" :value="getRating()" v-model="rating" @change="rate" />
                         </div>
                         <div v-else>
@@ -63,7 +63,7 @@
                     header-bg-variant="warning"
                     border-variant="warning"
                     body-class="light-warning">
-                <b-carousel :interval="4000"
+                <b-carousel v-if="recipe.pictures.length > 0" :interval="4000"
                             controls
                             indicators
                             :label-next="$t('recipe.next')"
@@ -72,8 +72,22 @@
                     <b-carousel-slide v-for="pic in recipe.pictures" :key="pic" :img-src="pic">
                     </b-carousel-slide>
                 </b-carousel>
+                <b-button v-if="loggedUserId > 0" style="margin-top: 10px" variant="warning" v-b-modal="'addPicture'">{{$t('recipe.addPicture.button')}}</b-button>
             </b-card>
             <hr />
+            <b-modal id="addPicture"
+                        @ok="addPicture()"
+                        :ok-title="$t('recipe.addPicture.ok')"
+                        :cancel-title="$t('recipe.addPicture.cancel')"
+                        :title="$t('recipe.addPicture.title')"
+                        header-close-variant="dark"
+                        header-text-variant="dark"
+                        header-bg-variant="warning"
+                        header-border-variant="danger"
+                        content-class="light-warning"
+                        ok-variant="danger">
+                <b-input placeholder="URL" v-model="picUrl"></b-input>
+            </b-modal>
             <h3>{{$t('recipe.comments')}}</h3>
             <CommentCard v-for="comment in this.recipe.comments"
                          :key="comment.comment"
@@ -144,7 +158,8 @@
                 recipes: [],
                 rateHover: false,
                 users: JSON.parse(localStorage.getItem('allUsers')),
-                newcomment: ""
+                newcomment: "",
+                picUrl: ""
             }
         },
         created() {
@@ -156,6 +171,12 @@
             console.log(this.loggedUserId);
         },
         methods: {
+            addPicture() {
+                console.log(this.picUrl);
+                this.recipe.pictures.push(this.picUrl);
+                localStorage.setItem('recipes', JSON.stringify(this.recipes));
+                this.picUrl = "";
+            },
             getVariant() {
                 if (this.recipe.difficulty < 3)
                     return "success";
