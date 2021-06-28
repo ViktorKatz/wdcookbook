@@ -41,7 +41,7 @@
                                         required
                                         v-model="type"
                                         style="padding:8px">
-                                        <option v-for="cat in categories" v-bind:key="cat.id" :value="cat.id">{{$t(cat.i18n_name)}}</option>
+                                        <option v-for="cat in categories.filter(e => e.id != 0)" v-bind:key="cat.id" :value="cat.id">{{$t(cat.i18n_name)}}</option>
                             </b-form-select>
                         </b-form-group>
                         <br />
