@@ -215,7 +215,7 @@ const defaultRecipes = [
         category: 3,
         title: 'Žerbo kocke',
         desc: 'Zagrejte mleko da bude mlako, dodajte šećer i izmrvljen svež kvasac, kao i dve kašike brašna, pa ostavite da odstoji desetak minuta da kvasac nadođe. Umutite mast sa žumancima, dodajte ih mešavini sa kvascem, pa postepeno dodajte brašno i sve dobro izmesite. Znaćete da je testo pripremljeno kad počne da se odvaja od prstiju.\nPodelite testo u četiri loptice, pa ih pospite sa malo brašna, prekrijte krpom i ostavite sat vremena da stoji na sobnoj temperaturi.\nPosle sat vremena razvucite sve četiri loptice od testa oklagijom u dimenzijama pleha u kom ćete peći kolač. Pleh namažite mašću ili uljem, spustite prvu koru od testa, premažite je džemom od kajsija, pospite trećinom šećera i trećinom mlevenih oraha, pa preko nje stavite drugi deo testa. Ponovite filovanje i isti postupak primenite i za treću koru od testa. Kad preko trećeg fila stavite četvrtu koru od testa prekrijte kolač krpom i ostavite ga još malo da naraste.\n\nKolač pecite pola sata u rerni na 180 stepeni. Ukoliko primetite da gornja kora brzo tamni, prekrijte kolač aluminijumskom folijom i nastavite da ga pečete.\nIzvadite i pustite da se ohladi, pa ga prelijte vrućom čokoladom rastopljenom sa mlekom i puterom.',
-        difficulty: 5,
+        difficulty: 4,
         preptime: 150,
         ratings: [
             { userId: 1, rating: 5 },
@@ -225,7 +225,48 @@ const defaultRecipes = [
         video: '',
         pictures: ['https://xdn.tf.rs/2020/10/13/zerbo-kocke-830x0.jpg'],
         comments: [
-            { userId: 5, comment: 'Ćao tetka!' },
+            { userId: 2, comment: 'Ćao tetka!' },
+        ]
+    },
+    {
+        id: 11,
+        userId: 5,
+        category: 4,
+        title: 'Granola bar',
+        desc: 'Ovo je obrok koji zahteva pripremu, ali takođe može da stoji, pa ga možete raspodeliti za više dana.\nMožete kombinovati doslovno kako hoćete, evo jednog mog predloga.\n\n3 kašike ovsenih pahuljica\n1 kašika mlevenog lana\n1 kašika kakao praha\n1 jaje\nmalo mleka\n150 grama bobičastog voća po izboru\n\nSve pomešate, izlijete na pek papir i stavite da se peče na 180 stepeni oko pola sata do 40 minuta.\n\nOvo ukupno ima oko 350 kalorija što je po kalorijskoj vrednosti više doručak nego užina tako da se od ove mere dobiju 2 užine.\nA vi svakako možete i duplirati smesu, pa da dobijete 4 užine. ',
+        difficulty: 3,
+        preptime: 40,
+        ratings: [
+            { userId: 1, rating: 2 },
+            { userId: 2, rating: 2 },
+            { userId: 3, rating: 4 },
+        ],
+        video: 'https://www.youtube.com/embed/7_YBUMoYZEE',
+        pictures: ['https://fitt.rs/wp-content/uploads/2020/07/ideje-za-u%C5%BEinu-7-1024x819.jpeg', 'https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1392,h_1392/k%2Farchive%2F15a57c2b302c7c3dcfabc0ea9e2934dd90bcd27b'],
+        comments: [
+            { userId: 1, comment: 'Lele ovo nešto zdravo!' },
+            { userId: 2, comment: 'Zdravo' },
+        ]
+    },
+    {
+        id: 12,
+        userId: 1,
+        category: 4,
+        title: 'Brusketi sa rikotom i narom',
+        desc: 'U odgovarajuću posudu sipati balzamiko sirće, šećer i limunov sok. Zagrejati do vrenja i na umerenoj vatri redukovati na pola količine. Preručiti u staklenu teglicu i ostaviti da se ohladi.\n\nU međuvremenu, iseći baget na šnite i grilovati ih par minuta, do zlatno smeđe boje.\n\nNa svaku brusketu naneti sloj rikota sira, rukolu i prstohvat nara.\n\nPreliti redukovanim balzamikom i posuti krupnom morskom solju.\n\nBruskete sa rikotom i narom poslužiti odmah.\n\nPreporuka je servirati uz poveću količinu crnog čaja.',
+        difficulty: 1,
+        preptime: 20,
+        ratings: [
+            { userId: 1, rating: 4 },
+            { userId: 2, rating: 5 },
+            { userId: 3, rating: 4 },
+            { userId: 4, rating: 2 },
+            { userId: 5, rating: 3 },
+        ],
+        video: '',
+        pictures: ['https://www.bakersdelight.com.au/wp-content/uploads/2018/10/Brie-and-Pomegranate-Bruschetta.jpg', 'https://www.tasteofhome.com/wp-content/uploads/2018/01/Pomegranate-Pistachio-Crostini_EXPS_SDDJ17_181270_C08_25_5b-2.jpg', 'https://rs.n1info.com/wp-content/uploads/2019/08/shutterstock-788439151-270892.jpeg'],
+        comments: [
+            { userId: 1, comment: 'Можете посути и пистаћима ко воли' },
         ]
     },
 ];
