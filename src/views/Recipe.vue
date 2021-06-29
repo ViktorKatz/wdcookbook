@@ -69,11 +69,7 @@
                         </div>
                     </b-col>
                 </b-row>
-                <b-row>
-                    <b-col cols="12" lg="2" offset-lg="2">
-                        <b-button variant="danger">PDF</b-button>
-                    </b-col>
-                </b-row>
+                <b-button variant="danger">PDF</b-button>
             </b-card>
             <hr />
             <b-card :header="$t('recipe.pictures')"
