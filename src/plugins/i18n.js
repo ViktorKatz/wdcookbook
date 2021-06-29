@@ -340,7 +340,7 @@ const messages = {
             authorship: 'Copyright 2021,  Viktor Katzenberger, Dragan Milovančević,  Software-mernöki osztály, Gépesmernöki egyetem, Belgrad',
         },
         homepage: {
-            title: 'Üdvözöljük!',
+            title: 'Üdvözöljük a CookBookra!',
             subtitle: 'Ahol minden konyhai almaid való lennek',
             bestRatedRecipes: 'Legjobb receptek',
         },

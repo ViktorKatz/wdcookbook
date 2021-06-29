@@ -8,7 +8,7 @@
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav pills fill>
                     <b-nav-item to="/" exact exact-active-class="active">{{ $t('header.home') }}</b-nav-item>
-                    <b-nav-item-dropdown to="recipe" exact exact-active-class="active" v-bind:text="$t('header.recipes')">
+                    <b-nav-item-dropdown menu-class="border-warning light-warning" to="recipe" exact exact-active-class="active" v-bind:text="$t('header.recipes')">
                         <b-dropdown-item v-for="category in categories" v-bind:key="category.i18n_name" v-bind:to="'/category/' + category.id">{{ $t(category.i18n_name) }}</b-dropdown-item>
                     </b-nav-item-dropdown>
                     <b-nav-item to="/addRecipe" exact exact-active-class="active">{{ $t('header.addRecipe') }}</b-nav-item>
@@ -19,11 +19,11 @@
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
                     <b-nav-form action="/category/0">
-                        <b-form-input id="searchbar" name ="search" size="sm" class="mr-sm-2" v-bind:placeholder="$t('header.search')"></b-form-input>
+                        <b-form-input id="searchbar" name ="search" size="sm" class="light-warning mt-1 mr-sm-2" v-bind:placeholder="$t('header.search')"></b-form-input>
                         <b-button size="sm" class="my-2 my-sm-0" type="submit"> <b-icon-search /> </b-button>
                     </b-nav-form>
 
-                    <b-nav-item-dropdown right v-bind:text="$t('header.lang')">
+                    <b-nav-item-dropdown menu-class="border-warning light-warning" :dropleft="true" v-bind:text="$t('header.lang')">
                         <b-dropdown-item v-on:click="changeLocale('sr')">SR</b-dropdown-item>
                         <b-dropdown-item v-on:click="changeLocale('en')">EN</b-dropdown-item>
                         <b-dropdown-item v-on:click="changeLocale('hu')">HU</b-dropdown-item>

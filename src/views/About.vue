@@ -1,11 +1,15 @@
 ﻿<template>
     <div class="about">
         <b-container fluid>
-            <b-row>
-                <br />
-                <h1>{{ $t('about.title') }}</h1>
-                <hr />
-            </b-row>
+            <b-card class="mb-4"
+                    bg-variant="warning"
+                    border-variant="warning">
+                <b-row>
+                    <br />
+                    <h1>{{ $t('about.title') }}</h1>
+                    <br />
+                </b-row>
+            </b-card>
             <b-row>
                 <b-col cols="12" lg="6">
                     <b-card :header="$t('about.missionAndVision')"

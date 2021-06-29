@@ -3,8 +3,11 @@
         <b-container fluid>
             <b-row id="HomepageTitle" class="mt-3">
                 <b-col>
-                    <h1> {{ $t('homepage.title') }} </h1>
-                    <h6 class="text-muted"> <i> {{ $t('homepage.subtitle') }} </i> </h6>
+                    <b-card bg-variant="warning"
+                            border-variant="warning">
+                        <h1> {{ $t('homepage.title') }} </h1>
+                        <h6 class="text-muted"> <i> {{ $t('homepage.subtitle') }} </i> </h6>
+                    </b-card>
                 </b-col>
             </b-row>
             <hr />

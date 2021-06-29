@@ -1,16 +1,18 @@
 <template>
     <div class="myAccount">
         <b-container fluid v-if="loggedUserId">
-            <br />
-            <b-row>
-                <b-col cols="12" lg="6">
-                    <h1>{{ $t('account.greeting') }}, {{ loggedUserUsername }}!</h1>
-                </b-col>
-                <b-col cols="12" lg="6">
-                    <h3>{{ $t('account.logoutQuestion') }}</h3>
-                    <b-button @click="logout" variant="danger">{{ $t('account.logout') }}</b-button>
-                </b-col>
-            </b-row>
+            <b-card bg-variant="warning"
+                    border-variant="warning">
+                <b-row>
+                    <b-col cols="12" lg="6">
+                        <h1>{{ $t('account.greeting') }}, {{ loggedUserUsername }}!</h1>
+                    </b-col>
+                    <b-col cols="12" lg="6">
+                        <h3>{{ $t('account.logoutQuestion') }}</h3>
+                        <b-button @click="logout" variant="danger">{{ $t('account.logout') }}</b-button>
+                    </b-col>
+                </b-row>
+            </b-card>
             <hr />
             <b-row>
                 <b-col>
@@ -41,9 +43,11 @@
             <hr />
         </b-container>
         <b-container fluid v-else>
-            <b-row id="pagedesc">
+            <b-card class="mb-4"
+                    bg-variant="warning"
+                    border-variant="warning">
                 <h1>{{ $t('account.pagedesc') }}</h1>
-            </b-row>
+            </b-card>
             <b-row>
                 <b-col id="login-col" cols="12" lg="6">
                     <b-card v-bind:header="$t('account.login')"
