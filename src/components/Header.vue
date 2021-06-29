@@ -26,6 +26,7 @@
                     <b-nav-item-dropdown right v-bind:text="$t('header.lang')">
                         <b-dropdown-item v-on:click="changeLocale('sr')">SR</b-dropdown-item>
                         <b-dropdown-item v-on:click="changeLocale('en')">EN</b-dropdown-item>
+                        <b-dropdown-item v-on:click="changeLocale('hu')">HU</b-dropdown-item>
                     </b-nav-item-dropdown>
                 </b-navbar-nav>
             </b-collapse>

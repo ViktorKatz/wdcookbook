@@ -260,6 +260,134 @@ const messages = {
             about: "About us",
             addRecipe: "New recipe"
         }
+    },
+    'hu': {
+        about: {
+            title: 'Rólunk',
+            whereWeAre: 'Hol vagyunk',
+            address: 'Cimunk',
+            contact: 'Kontaktunk',
+            telephone: 'Telefonszám',
+            email: 'E-mail',
+            director: 'Főnök',
+            altRole: 'Señor CEO',
+            aboutUsText: 'A CookBook.rs portált 1912-ben alapították azzal a céllal, hogy népszerűsítse a konyhaművészetet a fiatal lakosság körében az egész világon. Az arany hatvanas évek alatt a portál hatalmas változásoknak volt kitéve, és azóta több mint 1000 nyelven kínálják. Ma a portált havonta több mint 4 millió felhasználó keresi fel. A számos funkció közül néhány tartalmaz nemzeti recepteket, az utasítások vizuális megjelenítését, valamint az egész család szórakozását. ',
+            missionAndVision: 'Küldetés és jövőkép ',
+        },
+        account: {
+            pagedesc: 'Belépés vagy registració',
+            login: 'Belépés',
+            register: 'Registració',
+            username: 'Név',
+            password: 'Jelszó',
+            passwordAgain: 'Jelszó megerősítése',
+            usernamedesc: 'Név lehet csak bétűkat es számokat tartalmaz',
+            passworddesc: 'Jelszó kell nyolc bétűktől lenni',
+            greeting: 'Szia',
+            yourRecipes: 'Receptjeit',
+            yourComments: 'Megjegyzésjeit',
+            yourRatings: 'Értékelésjeit',
+            logout: 'Kilépés',
+            logoutQuestion: 'Biztosan hogy kilépsz?',
+            error: {
+                userExists: 'Az a név mar veszik',
+                userNotFound: 'Nincs a hasnáló azonos nevel',
+                wrongPassword: 'Rossz jelszó',
+                passwordsDontMatch: 'Jelszók nem ugyanaz',
+            },
+            regSuccess: 'Sikeres registració',
+        },
+        addRecipe: {
+            login: "Kérjük lépj be, es akkor receptet teszheted",
+            pagedesc: "A receptet teszz",
+            name: "Cim",
+            type: "Kategória",
+            duration: "Készítmény idő (percek)",
+            difficulty: "Nehézség",
+            instructions: "Utasítás",
+            add: "Teszz",
+            confirm: "Biztosan",
+            confirmQ: "Biztosan törölöd a receptet",
+            ok: "Igen",
+            cancel: "Nem"
+        },
+        categories: {
+            all: 'Minden recept',
+            appetizers: 'Előételek',
+            mainCourses: 'Főételek',
+            desserts: 'Édessegek',
+            snacks: 'Falatozok',
+            sort: "Rendezés",
+            order: {
+                id: "Tenni rend",
+                difficulty: "Nehezés",
+                rating: "Ártlagos értékelés",
+                asc: "felmenő",
+                desc: "lemenő"
+            }
+        },
+        header: {
+            lang: 'Nyelv',
+            search: 'Keresni',
+            home: 'Home',
+            recipes: 'Receptek',
+            addRecipe: 'Teszz receptet',
+            myAccount: 'Hasnálóm',
+            aboutUs: 'Rólunk',
+        },
+        footer: {
+            sitedesc: 'Culinary corner',
+            authorship: 'Copyright 2021,  Viktor Katzenberger, Dragan Milovančević,  Software-mernöki osztály, Gépesmernöki egyetem, Belgrad',
+        },
+        homepage: {
+            title: 'Üdvözöljük!',
+            subtitle: 'Ahol minden konyhai almaid való lennek',
+            bestRatedRecipes: 'Legjobb receptek',
+        },
+        recipe: {
+            rating: 'Értékelés',
+            difficulty: 'Nehezés',
+            by: 'Iró',
+            instructions: 'Utasítás',
+            comments: 'Megjegyzések',
+            pictures: 'Képek',
+            next: 'Következő',
+            prev: 'Előző',
+            noVideo: 'Nincs a video',
+            addComment: 'Teszz a megjegyzést',
+            duration: 'Idő',
+            login: 'Kérjük lep be, hogy tenned a megjegyzést',
+            addPicture: {
+                button: 'Teszz egy képet',
+                title: 'Teszz egy képet',
+                cancel: 'Törölj',
+                ok: 'Teszz'
+            },
+            addVideo: {
+                button: 'Teszz egy video',
+                title: 'Teszz egy video',
+                cancel: 'Törölj',
+                ok: 'Teszz'
+            }
+        },
+        blog: {
+            haveAlook: 'Újság',
+            author: 'Iró',
+            date: 'Dátum',
+            moreinfo: 'Több informació...',
+        },
+        breadcrumbs: {
+            home: 'Honlap',
+            about: 'Rólunk',
+            myAccount: 'Hasnálóm',
+            addRecipe: 'Tessz egy receptet',
+        },
+        title: {
+            home: "Honlap",
+            about: "Rólunk",
+            myAccount: "Hasnálóm",
+            addRecipe: "Tessz egy új receptet"
+        }
     }
 };
 
