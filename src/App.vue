@@ -4,7 +4,9 @@
         <b-container fluid>
             <b-row>
                 <b-col cols="12" lg="9">
-                    <b-breadcrumb :items="bc_items"></b-breadcrumb>
+                    <div id="bc_div" class="mx-sm-4">
+                        <b-breadcrumb :items="bc_items"></b-breadcrumb>
+                    </div>
                     <div id="router-view">
                         <router-view v-on:update-breadcrumbs="bc_items = $event" />
                     </div>
@@ -100,7 +102,7 @@
         content: var(--bs-breadcrumb-divider, ">") !important; /* To overwrite the default divider '/' */
     }
 
-    .breadcrumb-item a{
+    .breadcrumb-item a {
         color: #ffc107 !important;
     }
 
