@@ -286,7 +286,6 @@
                 doc.text(180, 20, this.username);
 
                 if (this.recipe.pictures.length > 0) {
-                    alert("debuuug ima slika");
                     doc.addImage(this.recipe.pictures[0], "JPEG", 10, 170, 190, 130);
                 }
 
