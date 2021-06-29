@@ -69,6 +69,7 @@
                         </div>
                     </b-col>
                 </b-row>
+                <b-button variant="danger" @click="convertToPdf()">PDF</b-button>
             </b-card>
             <hr />
             <b-card :header="$t('recipe.pictures')"
@@ -159,6 +160,7 @@
 <script>
     import categories from '@/data/categories.js'
     import CommentCard from '../components/CommentCard.vue'
+    import jsPDF from 'jspdf'
 
     export default {
         name: 'Recipe',
@@ -272,6 +274,26 @@
                 this.recipe.comments.push({ userId: this.loggedUserId, comment: this.newcomment });
                 localStorage.setItem('recipes', JSON.stringify(this.recipes));
                 this.newcomment = "";
+            },
+            convertToPdf() {
+                var doc = new jsPDF();
+
+                doc.setFontSize(22);
+                doc.text(20, 20, this.recipe.title);
+
+                doc.setTextColor(120);
+                doc.setFontSize(12);
+                doc.text(180, 20, this.username);
+
+                if (this.recipe.pictures.length > 0) {
+                    doc.addImage(this.recipe.pictures[0], "JPEG", 10, 170, 190, 130);
+                }
+
+                doc.setTextColor(0);
+                doc.setFontSize(14);
+                doc.text(20, 30, doc.splitTextToSize(this.recipe.desc, 180));
+
+                doc.save("CookBook - " + this.recipe.title + '.pdf');
             }
         },
         beforeRouteUpdate(to, from, next) {
