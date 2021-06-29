@@ -133,13 +133,25 @@ import categories from '@/data/categories.js'
                 difficulty: "",
                 loggedUserId: null,
                 loggedUserUsername: null,
-                categories: categories
+                categories: categories,
+                bc_items: [
+                    {
+                        text: this.$t('breadcrumbs.home'),
+                        to: {
+                            name: 'Home'
+                        }
+                    },
+                    {
+                        text: this.$t('breadcrumbs.addRecipe'),
+                    },
+                ]
             };
         },
         created() {
             this.$title = this.$t('title.addRecipe');
             this.loggedUserId = localStorage.getItem('loggedUserId');
             this.loggedUserUsername = localStorage.getItem('loggedUserUsername');
+            this.$emit('update-breadcrumbs', this.bc_items);
         },
         methods: {
             recipeSubmit(event) {

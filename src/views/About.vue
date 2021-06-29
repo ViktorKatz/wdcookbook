@@ -81,10 +81,22 @@
         data() {
             return {
                 mapcenter: { lat: 43.866627, lng: 20.155488 },
+                bc_items: [
+                    {
+                        text: this.$t('breadcrumbs.home'),
+                        to: {
+                            name: 'Home'
+                        }
+                    },
+                    {
+                        text: this.$t('breadcrumbs.about'),
+                    },
+                ]
             }
         },
         created() {
             this.$title = this.$t('title.about');
+            this.$emit('update-breadcrumbs', this.bc_items);
         }
     }
 

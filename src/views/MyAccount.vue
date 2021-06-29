@@ -162,12 +162,24 @@
                 regSuccess: "",
                 loggedUserId: null,
                 loggedUserUsername: null,
+                bc_items: [
+                    {
+                        text: this.$t('breadcrumbs.home'),
+                        to: {
+                            name: 'Home'
+                        }
+                    },
+                    {
+                        text: this.$t('breadcrumbs.myAccount'),
+                    },
+                ]
             };
         },
         created() {
             this.loggedUserId = parseInt(localStorage.getItem('loggedUserId'));
             this.loggedUserUsername = localStorage.getItem('loggedUserUsername');
             this.$title = this.loggedUserUsername;
+            this.$emit('update-breadcrumbs', this.bc_items);
         },
         methods: {
             loginSubmit(event) {

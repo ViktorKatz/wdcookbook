@@ -4,9 +4,9 @@
         <b-container fluid>
             <b-row>
                 <b-col cols="12" lg="9">
-                    <Breadcrumbs id="breadCrumbs" />
+                    <b-breadcrumb :items="bc_items"></b-breadcrumb>
                     <div id="router-view">
-                        <router-view />
+                        <router-view v-on:update-breadcrumbs="bc_items = $event" />
                     </div>
                 </b-col>
                 <b-col cols="12" sm="10" offset-sm="1" md="8" offset-md="2" lg="3" offset-lg="0">
@@ -29,6 +29,29 @@
         name: 'App',
         components: {
             Header, Footer, AdSpace
+        },
+        data() {
+            return {
+                bc_items: [
+                    {
+                        text: 'Admin',
+                        href: '#'
+                    },
+                    {
+                        text: 'Manage',
+                        href: '#'
+                    },
+                    {
+                        text: 'Library',
+                        active: true
+                    }
+                ]
+            }
+        },
+        methods: {
+            update_breadcrumbs() {
+                alert("updating bcs...");
+            }
         },
         created() {
             if (localStorage.getItem("allUsers") == null)
@@ -75,6 +98,10 @@
 
     .breadcrumb-item + .breadcrumb-item::before {
         content: var(--bs-breadcrumb-divider, ">") !important; /* To overwrite the default divider '/' */
+    }
+
+    .breadcrumb-item a{
+        color: #ffc107 !important;
     }
 
     .light-warning {
